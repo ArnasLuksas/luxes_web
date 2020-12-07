@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: #faf7ff;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+  }
+}
+// navigation container--------------------------------------------
+.nav-container {
+  background: #fff;
+}
+// header--------------------------------------------
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+
+  ul{
+    display: none;
+  }
+  a svg {
+    height: 3.2em;
+    width: 4em;
+  }
+  nav svg {
+    height: 2.5em;
+    width: 2.5em;
+    cursor: pointer;
+  }
+}
+
+.open{
+  display: block;
+}
+// welcome section ----------------------------------
+.welcome {
+  position: relative;
+  width: 100%;
+img{
+  max-height: 600px;
+}
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (translate(-50%, -80%));
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    padding: 1em 0em;
+    text-align: center;
+    background: linear-gradient(
+      360deg,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 1) 50%,
+      hsla(0, 0%, 0%, 0) 100%
+    );
+  }
+}
+// construction section  ---------------------------------
+
+.construction {
+  margin-top: 4em;
+}
+.contacts {
+  margin-bottom: 4em;
+}
+
+.construction,
+.doorsWindows,
+.realEstate,
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em;
+  margin: 2em 2em 2em 2em;
+  text-align: center;
+  background: #fff;
+  color: #303030;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  cursor: pointer;
+
+  .arrow {
+    width: 2em;
+  }
+  svg {
+    width: 5em;
+    fill: #303030;  
+  }
+
+  p {
+    font-size: 1.5em;
+    color:#303030;
+
+  }
+}
+
+
+//footer ----------------------------------------------
+footer {
+  text-align: center;
+  padding: 0.5em;
+  // background: #faf7ff;
+
+  a {
+    color: black;
+
+    text-decoration: underline;
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  
+  .welcome p{
+    padding: 2em 0em;
+    transform: translate(-50%, -70%);
+    font-size: 2.5em;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+ 
+  .nav-burger{
+    display: none;
+  }
+  header ul {
+    display: flex;
+    font-size: 1.1em;
+    margin-right: -1em;
+li{
+  margin: 0 1em;
+  text-align: right;
+}
+    a{
+      color:#303030;
+    }
+  }
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  body{
+    background-color: cornflowerblue;
+  }
+  }

@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: #faf7ff;
+}
+
+body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body img {
+  width: 100%;
+}
+
+.nav-container {
+  background: #fff;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 2em;
+}
+
+header ul {
+  display: none;
+}
+
+header a svg {
+  height: 3.2em;
+  width: 4em;
+}
+
+header nav svg {
+  height: 2.5em;
+  width: 2.5em;
+  cursor: pointer;
+}
+
+.open {
+  display: block;
+}
+
+.welcome {
+  position: relative;
+  width: 100%;
+}
+
+.welcome img {
+  max-height: 600px;
+}
+
+.welcome p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+  width: 100%;
+  color: white;
+  font-size: 2em;
+  padding: 1em 0em;
+  text-align: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(50%, black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.construction {
+  margin-top: 4em;
+}
+
+.contacts {
+  margin-bottom: 4em;
+}
+
+.construction,
+.doorsWindows,
+.realEstate,
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3em;
+  margin: 2em 2em 2em 2em;
+  text-align: center;
+  background: #fff;
+  color: #303030;
+  border-radius: 1em;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+          box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  cursor: pointer;
+}
+
+.construction .arrow,
+.doorsWindows .arrow,
+.realEstate .arrow,
+.contacts .arrow {
+  width: 2em;
+}
+
+.construction svg,
+.doorsWindows svg,
+.realEstate svg,
+.contacts svg {
+  width: 5em;
+  fill: #303030;
+}
+
+.construction p,
+.doorsWindows p,
+.realEstate p,
+.contacts p {
+  font-size: 1.5em;
+  color: #303030;
+}
+
+footer {
+  text-align: center;
+  padding: 0.5em;
+}
+
+footer a {
+  color: black;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .welcome p {
+    padding: 2em 0em;
+    -webkit-transform: translate(-50%, -70%);
+            transform: translate(-50%, -70%);
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-burger {
+    display: none;
+  }
+  header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.1em;
+    margin-right: -1em;
+  }
+  header ul li {
+    margin: 0 1em;
+    text-align: right;
+  }
+  header ul a {
+    color: #303030;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: cornflowerblue;
+  }
+}
+/*# sourceMappingURL=main.css.map */
