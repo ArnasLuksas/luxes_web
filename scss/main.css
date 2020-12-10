@@ -3,7 +3,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   background: #faf7ff;
 }
 
@@ -35,7 +35,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em 2em;
+  padding: 1em;
 }
 
 header ul {
@@ -59,7 +59,6 @@ header nav svg {
 
 .welcome {
   position: relative;
-  width: 100%;
 }
 
 .welcome img {
@@ -72,13 +71,15 @@ header nav svg {
   left: 50%;
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
-  width: 100%;
+  width: 80%;
+  max-width: 400px;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 1em 0em;
   text-align: center;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(50%, black), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%);
+  border: 1px solid white;
+  -webkit-backdrop-filter: brightness(25%);
+          backdrop-filter: brightness(25%);
 }
 
 .construction {
@@ -87,6 +88,10 @@ header nav svg {
 
 .contacts {
   margin-bottom: 4em;
+}
+
+.contacts form {
+  display: none;
 }
 
 .construction,
@@ -106,7 +111,6 @@ header nav svg {
   padding: 3em;
   margin: 2em 2em 2em 2em;
   text-align: center;
-  background: #fff;
   color: #303030;
   border-radius: 1em;
   background: #fff;
@@ -138,6 +142,25 @@ header nav svg {
   color: #303030;
 }
 
+.construction .content,
+.doorsWindows .content,
+.realEstate .content,
+.contacts .content {
+  display: none;
+}
+
+.construction:hover,
+.doorsWindows:hover,
+.realEstate:hover,
+.contacts:hover {
+  -webkit-box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+          box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+}
+
+.projects {
+  display: none;
+}
+
 footer {
   text-align: center;
   padding: 0.5em;
@@ -150,23 +173,21 @@ footer a {
 
 @media (min-width: 768px) {
   .welcome p {
-    padding: 2em 0em;
+    padding: 1em 0em;
     -webkit-transform: translate(-50%, -70%);
             transform: translate(-50%, -70%);
     font-size: 2.5em;
+    width: 80%;
+    max-width: 650px;
   }
 }
 
 @media (min-width: 992px) {
-  .nav-burger {
-    display: none;
-  }
   header ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     font-size: 1.1em;
-    margin-right: -1em;
   }
   header ul li {
     margin: 0 1em;
@@ -175,11 +196,198 @@ footer a {
   header ul a {
     color: #303030;
   }
+  .nav-burger {
+    display: none;
+  }
+  .welcome p {
+    width: 90%;
+    max-width: 650px;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "construction doorsWindows" "realEstate contacts";
+  }
+  .construction {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: construction;
+    margin: 2em 1em 1em 2em;
+  }
+  .doorsWindows {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: doorsWindows;
+    margin: 2em 2em 1em 1em;
+  }
+  .realEstate {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: realEstate;
+    margin: 1em 1em 2em 2em;
+  }
+  .projects {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: realEstate;
+    margin: 1em 1em 2em 2em;
+  }
+  .contacts {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: contacts;
+    margin: 1em 2em 2em 1em;
+  }
 }
 
 @media (min-width: 1200px) {
-  body {
-    background-color: cornflowerblue;
+  header {
+    padding: 1em 3em 1em 4em;
+    margin: 0 auto;
+  }
+  .welcome {
+    height: 700px;
+    overflow: hidden;
+  }
+  .welcome img {
+    max-height: 900px;
+    position: relative;
+    bottom: 50px;
+  }
+  .welcome p {
+    font-size: 3.2em;
+    letter-spacing: 0.1em;
+    padding: 1em 0;
+    max-width: 900px;
+  }
+  main {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "construction doorsWindows realEstate " "projects projects projects" "contacts contacts contacts";
+    padding: 2em 0;
+  }
+  .construction {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: construction;
+  }
+  .doorsWindows {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: doorsWindows;
+  }
+  .realEstate {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: realEstate;
+  }
+  .projects {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: projects;
+  }
+  .contacts {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: contacts;
+  }
+  .construction.one {
+    margin: 0em 0em 0em 5em;
+  }
+  .realEstate.three {
+    margin: 0 5em 0 0;
+  }
+  .doorsWindows.two {
+    margin: 0 2.5em 0 2.5em;
+  }
+  .construction,
+  .doorsWindows,
+  .realEstate,
+  .projects,
+  .contacts {
+    font-size: 0.8em;
+    margin: unset;
+  }
+  .construction .title,
+  .doorsWindows .title,
+  .realEstate .title,
+  .projects .title,
+  .contacts .title {
+    font-size: 1.9em;
+    margin: 1.875em 0 0 0;
+  }
+  .construction p,
+  .doorsWindows p,
+  .realEstate p,
+  .projects p,
+  .contacts p {
+    line-height: 1.5em;
+    margin-top: 0.9375em;
+    text-align: left;
+  }
+  .construction .content,
+  .doorsWindows .content,
+  .realEstate .content,
+  .contacts .content {
+    display: block;
+  }
+  .construction .content .arrow_bottom,
+  .doorsWindows .content .arrow_bottom,
+  .realEstate .content .arrow_bottom,
+  .contacts .content .arrow_bottom {
+    width: 2em;
+  }
+  .info_img {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  .arrow_bottom {
+    width: 2em;
+  }
+  .projects {
+    display: block;
+    background: #e1dee6;
+    margin-top: 4em;
+    max-width: unset;
+  }
+  .projects .title {
+    text-align: center;
+    font-size: 1.9em;
+    color: #303030;
+    line-height: 1.5em;
+    margin-bottom: 0.9375em;
+  }
+  .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2em 0 8em 0;
+  }
+  .object {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: calc(25% - 4em);
+    margin: 1em;
+  }
+  .object img {
+    height: 100%;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

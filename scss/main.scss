@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
 
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   background: #faf7ff;
   ul {
     list-style: none;
@@ -13,7 +13,6 @@ body {
   }
 
   a {
-
     text-decoration: none;
   }
   img {
@@ -29,9 +28,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1em;
 
-  ul{
+  ul {
     display: none;
   }
   a svg {
@@ -45,41 +44,41 @@ header {
   }
 }
 
-.open{
+.open {
   display: block;
 }
 // welcome section ----------------------------------
 .welcome {
   position: relative;
-  width: 100%;
-img{
-  max-height: 600px;
-}
+  img {
+    max-height: 600px;
+  }
   p {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: (translate(-50%, -80%));
-    width: 100%;
+    width: 80%;
+    max-width: 400px;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 1em 0em;
+
     text-align: center;
-    background: linear-gradient(
-      360deg,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 1) 50%,
-      hsla(0, 0%, 0%, 0) 100%
-    );
+    border: 1px solid white;
+    backdrop-filter: brightness(25%);
   }
 }
-// construction section  ---------------------------------
+// main ---------------------------------
 
 .construction {
   margin-top: 4em;
 }
 .contacts {
   margin-bottom: 4em;
+  form {
+    display: none;
+  }
 }
 
 .construction,
@@ -92,7 +91,6 @@ img{
   padding: 3em;
   margin: 2em 2em 2em 2em;
   text-align: center;
-  background: #fff;
   color: #303030;
   border-radius: 1em;
   background: #fff;
@@ -104,22 +102,31 @@ img{
   }
   svg {
     width: 5em;
-    fill: #303030;  
+    fill: #303030;
   }
 
   p {
     font-size: 1.5em;
-    color:#303030;
-
+    color: #303030;
+  }
+  .content {
+    display: none;
   }
 }
 
-
+.construction:hover,
+.doorsWindows:hover,
+.realEstate:hover,
+.contacts:hover {
+  box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+}
+.projects {
+  display: none;
+}
 //footer ----------------------------------------------
 footer {
   text-align: center;
   padding: 0.5em;
-  // background: #faf7ff;
 
   a {
     color: black;
@@ -128,42 +135,211 @@ footer {
   }
 }
 
-
 // Small devices (landscape phones, 576px and up)
 // @media (min-width: 576px) {  }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  
-  .welcome p{
-    padding: 2em 0em;
+@media (min-width: 768px) {
+  .welcome p {
+    padding: 1em 0em;
     transform: translate(-50%, -70%);
     font-size: 2.5em;
+    width: 80%;
+    max-width: 650px;
   }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
- 
-  .nav-burger{
-    display: none;
-  }
+@media (min-width: 992px) {
+  // header ---------------------------------------------------------------
   header ul {
     display: flex;
     font-size: 1.1em;
-    margin-right: -1em;
-li{
-  margin: 0 1em;
-  text-align: right;
-}
-    a{
-      color:#303030;
+    // margin-right: -1em;
+    li {
+      margin: 0 1em;
+      text-align: right;
+    }
+    a {
+      color: #303030;
     }
   }
- }
+  .nav-burger {
+    display: none;
+  }
+
+  // welcome section  -----------------------------------------------------
+  .welcome {
+    // grid-area: welcome;
+    p {
+      width: 90%;
+      max-width: 650px;
+    }
+  }
+  // main -----------------------------------------------------
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "construction doorsWindows"
+      "realEstate contacts";
+  }
+
+  .construction {
+    grid-area: construction;
+    margin: 2em 1em 1em 2em;
+  }
+  .doorsWindows {
+    grid-area: doorsWindows;
+    margin: 2em 2em 1em 1em;
+  }
+  .realEstate {
+    grid-area: realEstate;
+    margin: 1em 1em 2em 2em;
+  }
+  .projects {
+    grid-area: realEstate;
+    margin: 1em 1em 2em 2em;
+  }
+  .contacts {
+    grid-area: contacts;
+    margin: 1em 2em 2em 1em;
+  }
+}
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  body{
-    background-color: cornflowerblue;
+  // header ---------------------------------------------------------------
+
+  header {
+    padding: 1em 3em 1em 4em;
+    margin: 0 auto;
   }
+
+  // welcome section  -----------------------------------------------------
+
+  .welcome {
+    height: 700px;
+    overflow: hidden;
+
+    img {
+      max-height: 900px;
+      position: relative;
+      bottom: 50px;
+    }
+
+    p {
+      font-size: 3.2em;
+      letter-spacing: 0.1em;
+      padding: 1em 0;
+      // width: 50%;
+      max-width: 900px;
+    }
   }
+  // main -----------------------------------------------------
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "construction doorsWindows realEstate "
+      "projects projects projects"
+      "contacts contacts contacts";
+    padding: 2em 0;
+  }
+
+  .construction {
+    grid-area: construction;
+  }
+  .doorsWindows {
+    grid-area: doorsWindows;
+  }
+  .realEstate {
+    grid-area: realEstate;
+  }
+  .projects {
+    grid-area: projects;
+  }
+  .contacts {
+    grid-area: contacts;
+  }
+  .construction.one {
+    margin: 0em 0em 0em 5em;
+  }
+  .realEstate.three {
+    margin: 0 5em 0 0;
+  }
+  .doorsWindows.two {
+    margin: 0 2.5em 0 2.5em;
+  }
+  .construction,
+  .doorsWindows,
+  .realEstate,
+  .projects,
+  .contacts {
+    font-size: 0.8em;
+    margin: unset;
+
+    .title {
+      font-size: 1.9em;
+      margin: 1.875em 0 0 0;
+    }
+    p {
+      line-height: 1.5em;
+      margin-top: 0.9375em;
+      text-align: left;
+    }
+  }
+
+  .construction .content,
+  .doorsWindows .content,
+  .realEstate .content,
+  .contacts .content {
+    display: block;
+    .arrow_bottom {
+      width: 2em;
+    }
+  }
+  .info_img {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  .arrow_bottom {
+    width: 2em;
+  }
+
+  // projects section gallery--------------------------------------------
+  .projects {
+    display: block;
+    background: #e1dee6;
+    margin-top: 4em;
+    max-width: unset;
+
+    .title {
+      text-align: center;
+      font-size: 1.9em;
+      color: #303030;
+      line-height: 1.5em;
+      margin-bottom: 0.9375em;
+    }
+  }
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2em 0 8em 0;
+  }
+  .object {
+    display: flex;
+    width: calc(25% - 4em);
+    margin: 1em;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
