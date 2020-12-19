@@ -1,9 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
 body {
-  height: 100vh;
+  min-height: 100%;
+  height: 100%;
+}
+
+body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #faf7ff;
 }
 
@@ -23,6 +33,40 @@ body img {
 
 .nav-container {
   background: #fff;
+  position: relative;
+}
+
+.list {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.list li {
+  padding: 1.5em 0 0 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.list li a {
+  color: #272a35;
+}
+
+nav .open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header {
@@ -35,7 +79,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 header ul {
@@ -47,14 +91,27 @@ header a svg {
   width: 4em;
 }
 
-header nav svg {
-  height: 2.5em;
-  width: 2.5em;
-  cursor: pointer;
+header header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  background: #123;
 }
 
-.open {
-  display: block;
+header .nav-burger {
+  cursor: pointer;
+  position: relative;
+  z-index: 111;
+}
+
+header .line {
+  content: " ";
+  border: 3px solid black;
+  line-height: 1px;
+  padding: 0;
+  margin: 6px 0;
+  width: 2.5em;
 }
 
 .welcome {
@@ -82,22 +139,26 @@ header nav svg {
           backdrop-filter: brightness(25%);
 }
 
+.tablet {
+  display: none;
+}
+
 .construction {
   margin-top: 4em;
 }
 
-.contacts {
+.contacts_info {
   margin-bottom: 4em;
-}
-
-.contacts form {
-  display: none;
 }
 
 .construction,
 .doorsWindows,
 .realEstate,
-.contacts {
+.contacts_info,
+.construction_tablet,
+.doorsWindows_tablet,
+.realEstate_tablet,
+.contacts_tablet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,10 +169,10 @@ header nav svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3em;
+  padding: 3em 0;
   margin: 2em 2em 2em 2em;
   text-align: center;
-  color: #303030;
+  color: #272a35;
   border-radius: 1em;
   background: #fff;
   -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
@@ -122,42 +183,61 @@ header nav svg {
 .construction .arrow,
 .doorsWindows .arrow,
 .realEstate .arrow,
-.contacts .arrow {
+.contacts_info .arrow,
+.construction_tablet .arrow,
+.doorsWindows_tablet .arrow,
+.realEstate_tablet .arrow,
+.contacts_tablet .arrow {
   width: 2em;
 }
 
 .construction svg,
 .doorsWindows svg,
 .realEstate svg,
-.contacts svg {
+.contacts_info svg,
+.construction_tablet svg,
+.doorsWindows_tablet svg,
+.realEstate_tablet svg,
+.contacts_tablet svg {
   width: 5em;
-  fill: #303030;
+  fill: #272a35;
 }
 
 .construction p,
 .doorsWindows p,
 .realEstate p,
-.contacts p {
+.contacts_info p,
+.construction_tablet p,
+.doorsWindows_tablet p,
+.realEstate_tablet p,
+.contacts_tablet p {
   font-size: 1.5em;
-  color: #303030;
+  color: #272a35;
 }
 
 .construction .content,
 .doorsWindows .content,
 .realEstate .content,
-.contacts .content {
+.contacts_info .content,
+.construction_tablet .content,
+.doorsWindows_tablet .content,
+.realEstate_tablet .content,
+.contacts_tablet .content {
   display: none;
 }
 
 .construction:hover,
 .doorsWindows:hover,
 .realEstate:hover,
-.contacts:hover {
+.contacts_info:hover,
+.construction_tablet:hover,
+.doorsWindows_tablet:hover,
+.realEstate_tablet:hover {
   -webkit-box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
           box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
 }
 
-.projects {
+.projects_gallery {
   display: none;
 }
 
@@ -188,13 +268,18 @@ footer a {
     display: -ms-flexbox;
     display: flex;
     font-size: 1.1em;
+    padding: 1em 2em;
   }
-  header ul li {
-    margin: 0 1em;
-    text-align: right;
+  header .list {
+    position: unset;
   }
-  header ul a {
-    color: #303030;
+  header .list li {
+    padding: unset;
+    font-size: unset;
+    padding-left: 2em;
+  }
+  header .list li a {
+    color: #272a35;
   }
   .nav-burger {
     display: none;
@@ -203,49 +288,81 @@ footer a {
     width: 90%;
     max-width: 650px;
   }
-  main {
+  .tablet {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "construction doorsWindows" "realEstate contacts";
+        grid-template-areas: "construction_tablet doorsWindows_tablet" "realEstate_tablet contacts_tablet";
   }
-  .construction {
+  .construction_tablet {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: construction;
+    grid-area: construction_tablet;
     margin: 2em 1em 1em 2em;
   }
-  .doorsWindows {
+  .doorsWindows_tablet {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
-    grid-area: doorsWindows;
+    grid-area: doorsWindows_tablet;
     margin: 2em 2em 1em 1em;
   }
-  .realEstate {
+  .realEstate_tablet {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    grid-area: realEstate;
+    grid-area: realEstate_tablet;
     margin: 1em 1em 2em 2em;
   }
-  .projects {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: realEstate;
-    margin: 1em 1em 2em 2em;
-  }
-  .contacts {
+  .contacts_tablet {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
-    grid-area: contacts;
+    grid-area: contacts_tablet;
     margin: 1em 2em 2em 1em;
+  }
+  .arrow {
+    width: 2em;
+  }
+  .arrow_bottom {
+    display: none;
+  }
+  svg {
+    width: 5em;
+    fill: #272a35;
+  }
+  .construction,
+  .doorsWindows,
+  .realEstate,
+  .contacts_info {
+    display: none;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) and (min-width: 1200px) {
+  .construction,
+  .doorsWindows,
+  .realEstate,
+  .contacts_info {
+    display: block;
+  }
   header {
-    padding: 1em 3em 1em 4em;
     margin: 0 auto;
+    max-width: 1370px;
+  }
+  .list a {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#272a35));
+    background-image: linear-gradient(#272a35);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    -webkit-transition: background-size 0.2s ease-in-out;
+    transition: background-size 0.2s ease-in-out;
+    text-decoration: none;
+  }
+  .list a:hover,
+  .list a:focus,
+  .list a:active {
+    background-size: 100% 0.1em;
   }
   .welcome {
     height: 700px;
@@ -258,88 +375,135 @@ footer a {
   }
   .welcome p {
     font-size: 3.2em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     padding: 1em 0;
     max-width: 900px;
   }
+  .tablet {
+    display: none;
+  }
   main {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "construction  doorsWindows  realEstate" "projects_gallery projects_gallery projects_gallery" "contacts_info contacts_info contacts_info";
+    padding: 6em 0 0 0;
+    margin: 0 auto;
+  }
+  .our_services {
+    display: -ms-grid;
+    display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-gap: 2em;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "construction doorsWindows realEstate " "projects projects projects" "contacts contacts contacts";
-    padding: 2em 0;
+        grid-template-areas: "construction doorsWindows realEstate";
+    padding: 0 2em;
   }
   .construction {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: construction;
+    margin: unset;
   }
   .doorsWindows {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: doorsWindows;
+    margin: unset;
   }
   .realEstate {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
     grid-area: realEstate;
-  }
-  .projects {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: projects;
-  }
-  .contacts {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: contacts;
-  }
-  .construction.one {
-    margin: 0em 0em 0em 5em;
-  }
-  .realEstate.three {
-    margin: 0 5em 0 0;
-  }
-  .doorsWindows.two {
-    margin: 0 2.5em 0 2.5em;
-  }
-  .construction,
-  .doorsWindows,
-  .realEstate,
-  .projects,
-  .contacts {
-    font-size: 0.8em;
     margin: unset;
   }
   .construction .title,
   .doorsWindows .title,
   .realEstate .title,
-  .projects .title,
-  .contacts .title {
-    font-size: 1.9em;
-    margin: 1.875em 0 0 0;
-  }
-  .construction p,
-  .doorsWindows p,
-  .realEstate p,
-  .projects p,
-  .contacts p {
-    line-height: 1.5em;
-    margin-top: 0.9375em;
-    text-align: left;
+  .projects_gallery .title {
+    text-align: center;
+    font-size: 1.7em;
+    color: #272a35;
+    padding: 1em 0 1em 0;
+    margin: unset;
+    letter-spacing: 0.05em;
   }
   .construction .content,
   .doorsWindows .content,
   .realEstate .content,
-  .contacts .content {
+  .contacts_info .content {
     display: block;
   }
   .construction .content .arrow_bottom,
   .doorsWindows .content .arrow_bottom,
   .realEstate .content .arrow_bottom,
-  .contacts .content .arrow_bottom {
+  .contacts_info .content .arrow_bottom {
     width: 2em;
+  }
+  .contacts_info {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: contacts_info;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    cursor: unset;
+    text-align: left;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-color: #272a35;
+    border-radius: unset;
+    width: 100%;
+    margin: 0;
+  }
+  .contacts_info .contacts {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .contacts_info .contacts .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    color: #d3d7e5;
+  }
+  .info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .info .address span,
+  .info .bank span {
+    font-size: 1.7em;
+    display: inline-block;
+    padding-bottom: 0.5em;
+    padding-left: 1.7em;
+    letter-spacing: 0.05em;
+  }
+  .info p {
+    line-height: 30px;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 3em;
+    margin: 0;
+    color: #d3d7e5;
+  }
+  div.info > p {
+    color: #272a35;
+  }
+  .contacts_info:hover {
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+  }
+  .contacts_img {
+    display: none;
   }
   .info_img {
     display: none;
@@ -349,45 +513,49 @@ footer a {
   }
   .arrow_bottom {
     width: 2em;
-  }
-  .projects {
-    display: block;
-    background: #e1dee6;
-    margin-top: 4em;
-    max-width: unset;
-  }
-  .projects .title {
-    text-align: center;
-    font-size: 1.9em;
-    color: #303030;
-    line-height: 1.5em;
-    margin-bottom: 0.9375em;
-  }
-  .gallery {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 2em 0 8em 0;
   }
-  .object {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: calc(25% - 4em);
-    margin: 1em;
-  }
-  .object img {
-    height: 100%;
+  .projects_gallery {
+    display: block;
+    padding: 2em 0 4em 0;
     width: 100%;
+    margin: 6em 0 0 0;
+    background-color: #d3d7e5;
+  }
+  .projects_gallery .title {
+    border: 3px solid #272a35;
+    -webkit-transform: translate(80%, 0%);
+            transform: translate(80%, 0%);
+    width: 38.5%;
+  }
+  .projects {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3em;
+  }
+  .gallery {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2em;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    margin: 2em 2em 0em 2em;
+  }
+  footer {
+    padding: 6em 0 0 0;
+    background-color: #272a35;
+    color: #d3d7e5;
+    letter-spacing: 0.05em;
+  }
+  footer a {
+    color: #d3d7e5;
+    letter-spacing: 0.05em;
   }
 }
 /*# sourceMappingURL=main.css.map */

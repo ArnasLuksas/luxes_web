@@ -1,11 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
 body {
-  height: 100vh;
+  min-height: 100%;
+  height: 100%;
+}
+body {
   margin: 0;
   padding: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
   background: #faf7ff;
+
   ul {
     list-style: none;
     margin: 0;
@@ -22,13 +29,37 @@ body {
 // navigation container--------------------------------------------
 .nav-container {
   background: #fff;
+  position: relative;
+}
+.list {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  li {
+    padding: 1.5em 0 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    a {
+      color: #272a35;
+    }
+  }
+}
+nav .open {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 // header--------------------------------------------
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 1em 2em;
 
   ul {
     display: none;
@@ -37,16 +68,29 @@ header {
     height: 3.2em;
     width: 4em;
   }
-  nav svg {
-    height: 2.5em;
-    width: 2.5em;
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    background: #123;
+  }
+  .nav-burger {
     cursor: pointer;
+    position: relative;
+    z-index: 111;
+  }
+  .line {
+    content: " ";
+    border: 3px solid black;
+    line-height: 1px;
+    padding: 0;
+    margin: 6px 0;
+    width: 2.5em;
   }
 }
 
-.open {
-  display: block;
-}
 // welcome section ----------------------------------
 .welcome {
   position: relative;
@@ -69,29 +113,36 @@ header {
     backdrop-filter: brightness(25%);
   }
 }
+.tablet {
+  display: none;
+}
 // main ---------------------------------
 
 .construction {
   margin-top: 4em;
 }
-.contacts {
+.contacts_info {
   margin-bottom: 4em;
   form {
-    display: none;
+    // display: none;
   }
 }
 
 .construction,
 .doorsWindows,
 .realEstate,
-.contacts {
+.contacts_info,
+.construction_tablet,
+.doorsWindows_tablet,
+.realEstate_tablet,
+.contacts_tablet {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3em;
+  padding: 3em 0;
   margin: 2em 2em 2em 2em;
   text-align: center;
-  color: #303030;
+  color: #272a35;
   border-radius: 1em;
   background: #fff;
   box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
@@ -102,12 +153,12 @@ header {
   }
   svg {
     width: 5em;
-    fill: #303030;
+    fill: #272a35;
   }
 
   p {
     font-size: 1.5em;
-    color: #303030;
+    color: #272a35;
   }
   .content {
     display: none;
@@ -117,11 +168,16 @@ header {
 .construction:hover,
 .doorsWindows:hover,
 .realEstate:hover,
-.contacts:hover {
+.contacts_info:hover,
+.construction_tablet:hover,
+.doorsWindows_tablet:hover,
+.realEstate_tablet:hover {
   box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
 }
-.projects {
+.projects_gallery {
   display: none;
+
+  // main end  -----------------------------------------------------
 }
 //footer ----------------------------------------------
 footer {
@@ -152,194 +208,299 @@ footer {
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   // header ---------------------------------------------------------------
-  header ul {
-    display: flex;
-    font-size: 1.1em;
-    // margin-right: -1em;
-    li {
-      margin: 0 1em;
-      text-align: right;
+  header {
+    ul {
+      display: flex;
+      font-size: 1.1em;
+      padding: 1em 2em;
     }
-    a {
-      color: #303030;
+    .list {
+      position: unset;
+      li {
+        padding: unset;
+        font-size: unset;
+        padding-left: 2em;
+        a {
+          color: #272a35;
+        }
+      }
     }
   }
+
   .nav-burger {
     display: none;
   }
 
   // welcome section  -----------------------------------------------------
   .welcome {
-    // grid-area: welcome;
     p {
       width: 90%;
       max-width: 650px;
     }
   }
-  // main -----------------------------------------------------
+  // tablet  -----------------------------------------------------
 
-  main {
+  .tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "construction doorsWindows"
-      "realEstate contacts";
+      "construction_tablet doorsWindows_tablet"
+      "realEstate_tablet contacts_tablet";
   }
-
-  .construction {
-    grid-area: construction;
+  .construction_tablet {
+    grid-area: construction_tablet;
     margin: 2em 1em 1em 2em;
   }
-  .doorsWindows {
-    grid-area: doorsWindows;
+  .doorsWindows_tablet {
+    grid-area: doorsWindows_tablet;
     margin: 2em 2em 1em 1em;
   }
-  .realEstate {
-    grid-area: realEstate;
+  .realEstate_tablet {
+    grid-area: realEstate_tablet;
     margin: 1em 1em 2em 2em;
   }
-  .projects {
-    grid-area: realEstate;
-    margin: 1em 1em 2em 2em;
-  }
-  .contacts {
-    grid-area: contacts;
+  .contacts_tablet {
+    grid-area: contacts_tablet;
     margin: 1em 2em 2em 1em;
   }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  // header ---------------------------------------------------------------
-
-  header {
-    padding: 1em 3em 1em 4em;
-    margin: 0 auto;
+  .arrow {
+    width: 2em;
+  }
+  .arrow_bottom {
+    display: none;
   }
 
-  // welcome section  -----------------------------------------------------
-
-  .welcome {
-    height: 700px;
-    overflow: hidden;
-
-    img {
-      max-height: 900px;
-      position: relative;
-      bottom: 50px;
-    }
-
-    p {
-      font-size: 3.2em;
-      letter-spacing: 0.1em;
-      padding: 1em 0;
-      // width: 50%;
-      max-width: 900px;
-    }
+  svg {
+    width: 5em;
+    fill: #272a35;
   }
+
   // main -----------------------------------------------------
-
-  main {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "construction doorsWindows realEstate "
-      "projects projects projects"
-      "contacts contacts contacts";
-    padding: 2em 0;
-  }
-
-  .construction {
-    grid-area: construction;
-  }
-  .doorsWindows {
-    grid-area: doorsWindows;
-  }
-  .realEstate {
-    grid-area: realEstate;
-  }
-  .projects {
-    grid-area: projects;
-  }
-  .contacts {
-    grid-area: contacts;
-  }
-  .construction.one {
-    margin: 0em 0em 0em 5em;
-  }
-  .realEstate.three {
-    margin: 0 5em 0 0;
-  }
-  .doorsWindows.two {
-    margin: 0 2.5em 0 2.5em;
-  }
   .construction,
   .doorsWindows,
   .realEstate,
-  .projects,
-  .contacts {
-    font-size: 0.8em;
-    margin: unset;
-
-    .title {
-      font-size: 1.9em;
-      margin: 1.875em 0 0 0;
-    }
-    p {
-      line-height: 1.5em;
-      margin-top: 0.9375em;
-      text-align: left;
-    }
+  .contacts_info {
+    display: none;
   }
 
-  .construction .content,
-  .doorsWindows .content,
-  .realEstate .content,
-  .contacts .content {
-    display: block;
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    // header ---------------------------------------------------------------
+    .construction,
+    .doorsWindows,
+    .realEstate,
+    .contacts_info {
+      display: block;
+    }
+
+    header {
+      margin: 0 auto;
+      max-width: 1370px;
+    }
+    //navigatin underline effect
+    .list a {
+      background-image: linear-gradient(#272a35);
+      background-size: 0% 0.1em;
+      background-position-y: 100%;
+      background-position-x: 0%;
+      background-repeat: no-repeat;
+      transition: background-size 0.2s ease-in-out;
+      text-decoration: none;
+    }
+
+    .list a:hover,
+    .list a:focus,
+    .list a:active {
+      background-size: 100% 0.1em;
+    }
+
+    // welcome section  -----------------------------------------------------
+
+    .welcome {
+      height: 700px;
+      overflow: hidden;
+
+      img {
+        max-height: 900px;
+        position: relative;
+        bottom: 50px;
+      }
+
+      p {
+        font-size: 3.2em;
+        letter-spacing: 0.05em;
+        padding: 1em 0;
+        max-width: 900px;
+      }
+    }
+    .tablet {
+      display: none;
+    }
+    // main start-----------------------------------------------------
+
+    main {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-areas:
+        "construction  doorsWindows  realEstate"
+        "projects_gallery projects_gallery projects_gallery"
+        "contacts_info contacts_info contacts_info";
+      padding: 6em 0 0 0;
+      margin: 0 auto;
+    }
+    // services-----------------------------------------------------
+
+    .our_services {
+      display: grid;
+      max-width: 1440px;
+      margin: 0 auto;
+      grid-gap: 2em;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "construction doorsWindows realEstate";
+      padding: 0 2em;
+    }
+
+    .construction {
+      grid-area: construction;
+      margin: unset;
+    }
+    .doorsWindows {
+      grid-area: doorsWindows;
+      margin: unset;
+    }
+    .realEstate {
+      grid-area: realEstate;
+      margin: unset;
+    }
+    .construction,
+    .doorsWindows,
+    .realEstate,
+    .projects_gallery {
+      .title {
+        text-align: center;
+        font-size: 1.7em;
+        color: #272a35;
+        padding: 1em 0 1em 0;
+        margin: unset;
+        letter-spacing: 0.05em;
+      }
+    }
+    .construction .content,
+    .doorsWindows .content,
+    .realEstate .content,
+    .contacts_info .content {
+      display: block;
+      .arrow_bottom {
+        width: 2em;
+      }
+    }
+    // contacts-----------------------------------------------------
+
+    .contacts_info {
+      grid-area: contacts_info;
+      box-shadow: unset;
+      cursor: unset;
+      text-align: left;
+      align-items: flex-end;
+      background-color: #272a35;
+      border-radius: unset;
+      width: 100%;
+      margin: 0;
+      // .title {
+      //   display: none;
+      // }
+      .contacts {
+        max-width: 1440px;
+        margin: 0 auto;
+        .content {
+          display: flex;
+          justify-content: flex-end;
+          color: #d3d7e5;
+        }
+      }
+    }
+    .info {
+      display: flex;
+      justify-content: space-between;
+      .address span,
+      .bank span {
+        font-size: 1.7em;
+        display: inline-block;
+        padding-bottom: 0.5em;
+        padding-left: 1.7em;
+        letter-spacing: 0.05em;
+      }
+      p {
+        line-height: 30px;
+        text-align: left;
+        font-size: 16px;
+        padding: 0 3em;
+        margin: 0;
+        color: #d3d7e5;
+      }
+    }
+    div.info > p {
+      color: #272a35;
+    }
+
+    .contacts_info:hover {
+      box-shadow: unset;
+    }
+
+    .contacts_img {
+      display: none;
+    }
+
+    .info_img {
+      display: none;
+    }
+    .arrow {
+      display: none;
+    }
     .arrow_bottom {
       width: 2em;
+      display: flex;
+      justify-content: center;
     }
-  }
-  .info_img {
-    display: none;
-  }
-  .arrow {
-    display: none;
-  }
-  .arrow_bottom {
-    width: 2em;
-  }
 
-  // projects section gallery--------------------------------------------
-  .projects {
-    display: block;
-    background: #e1dee6;
-    margin-top: 4em;
-    max-width: unset;
+    // projects section gallery--------------------------------------------
 
-    .title {
-      text-align: center;
-      font-size: 1.9em;
-      color: #303030;
-      line-height: 1.5em;
-      margin-bottom: 0.9375em;
-    }
-  }
-  .gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 2em 0 8em 0;
-  }
-  .object {
-    display: flex;
-    width: calc(25% - 4em);
-    margin: 1em;
-
-    img {
-      height: 100%;
+    .projects_gallery {
+      display: block;
+      padding: 2em 0 4em 0;
       width: 100%;
+      margin: 6em 0 0 0;
+      background-color: #d3d7e5;
+    }
+    .projects_gallery .title {
+      border: 3px solid #272a35;
+
+      transform: translate(80%, 0%);
+      width: 38.5%;
+    }
+    .projects {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 3em;
+    }
+    .gallery {
+      display: grid;
+      grid-gap: 2em;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 2em 2em 0em 2em;
+    }
+    // main end-----------------------------------------------------
+
+    footer {
+      padding: 6em 0 0 0;
+      background-color: #272a35;
+      color: #d3d7e5;
+      letter-spacing: 0.05em;
+
+      a {
+        color: #d3d7e5;
+        letter-spacing: 0.05em;
+      }
     }
   }
 }
