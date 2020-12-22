@@ -29,7 +29,7 @@ body {
 // navigation container--------------------------------------------
 .nav-container {
   background: #fff;
-  position: relative;
+  // position: relative;
 }
 .list {
   background-color: #fff;
@@ -94,6 +94,7 @@ header {
 // welcome section ----------------------------------
 .welcome {
   position: relative;
+
   img {
     max-height: 600px;
   }
@@ -107,7 +108,6 @@ header {
     color: white;
     font-size: 1.5em;
     padding: 1em 0em;
-
     text-align: center;
     border: 1px solid white;
     backdrop-filter: brightness(25%);
@@ -147,6 +147,7 @@ header {
   background: #fff;
   box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
   cursor: pointer;
+  transition-duration: 0.4s;
 
   .arrow {
     width: 2em;
@@ -176,8 +177,108 @@ header {
 }
 .projects_gallery {
   display: none;
+}
 
-  // main end  -----------------------------------------------------
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  .address span,
+  .bank span {
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1.3em;
+    letter-spacing: 0.05em;
+    text-align: left;
+    line-height: 60px;
+  }
+  p {
+    line-height: 30px;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 2em;
+    margin: 0;
+    color: #272a35;
+    text-align: left;
+  }
+  .address,
+  .bank {
+    text-align: left;
+    // padding-top: 30px;
+  }
+  .address {
+    margin: 0 0 2em 0;
+  }
+}
+
+// main end  -----------------------------------------------------
+
+.contacts_info {
+  display: flex;
+  // box-shadow: unset;
+  // justify-content: flex-start;
+  align-items: flex-start;
+  // background-color: red;
+  .contacts {
+    width: 100%;
+    cursor: auto;
+  }
+}
+.contacts_info:hover {
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+}
+form {
+  width: 100%;
+  margin-bottom: 2em;
+  // max-width: 540px;
+  // margin: 0 auto;
+  // border: 1px solid black;
+  padding: 2em;
+  text-align: left;
+  label,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #272a35;
+    background-color: #d3d7e5;
+    border: none;
+    outline: none;
+    padding: 0.3em;
+    transition-duration: 0.4s;
+  }
+
+  label {
+    margin: 1.2em 0 0 0;
+    background-color: #fff;
+  }
+  input:focus,
+  textarea:focus {
+    background-color: #272a35;
+    color: #d3d7e5;
+  }
+}
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  display: inline-block;
+  // color: #272a35;
+  background-color: #272a35;
+  border: none;
+  color: #d3d7e5;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #d3d7e5;
+  color: #272a35;
+}
+.contacts_info .content {
+  display: none;
+}
+.content.visible {
+  display: block;
 }
 //footer ----------------------------------------------
 footer {
@@ -230,6 +331,22 @@ footer {
   .nav-burger {
     display: none;
   }
+  //navigatin underline effect
+  .list a {
+    background-image: linear-gradient(#272a35);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.2s ease-in-out;
+    text-decoration: none;
+  }
+
+  .list a:hover,
+  .list a:focus,
+  .list a:active {
+    background-size: 100% 0.1em;
+  }
 
   // welcome section  -----------------------------------------------------
   .welcome {
@@ -276,12 +393,66 @@ footer {
   }
 
   // main -----------------------------------------------------
-  .construction,
-  .doorsWindows,
-  .realEstate,
-  .contacts_info {
-    display: none;
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
+
+  .info {
+    flex-direction: column;
+    width: 60%;
+    p {
+      width: 300px;
+    }
+    form {
+      padding: 0em 2em 2em 2em;
+      label:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+  .info.main {
+    flex-direction: column;
+    width: unset;
+    p {
+      width: unset;
+    }
+    form {
+      padding: 0em 2em 2em 2em;
+      label:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  // .info {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   .address span,
+  //   .bank span {
+  //     font-size: 1.5em;
+  //     padding-bottom: 0.5em;
+  //     padding-left: 1.3em;
+  //     letter-spacing: 0.05em;
+  //     text-align: left;
+  //     line-height: 60px;
+  //   }
+  //   p {
+  //     line-height: 30px;
+  //     text-align: left;
+  //     font-size: 16px;
+  //     padding: 0 2em;
+  //     margin: 0;
+  //     color: #272a35;
+  //     text-align: left;
+  //   }
+  //   .address,
+  //   .bank {
+  //     text-align: left;
+  //     padding-top: 30px;
+  //   }
+  // }
 
   // Extra large devices (large desktops, 1200px and up)
   @media (min-width: 1200px) {
@@ -296,22 +467,6 @@ footer {
     header {
       margin: 0 auto;
       max-width: 1370px;
-    }
-    //navigatin underline effect
-    .list a {
-      background-image: linear-gradient(#272a35);
-      background-size: 0% 0.1em;
-      background-position-y: 100%;
-      background-position-x: 0%;
-      background-repeat: no-repeat;
-      transition: background-size 0.2s ease-in-out;
-      text-decoration: none;
-    }
-
-    .list a:hover,
-    .list a:focus,
-    .list a:active {
-      background-size: 100% 0.1em;
     }
 
     // welcome section  -----------------------------------------------------
@@ -442,9 +597,9 @@ footer {
       color: #272a35;
     }
 
-    .contacts_info:hover {
-      box-shadow: unset;
-    }
+    // .contacts_info:hover {
+    //   box-shadow: unset;
+    // }
 
     .contacts_img {
       display: none;

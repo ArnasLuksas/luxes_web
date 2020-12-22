@@ -33,7 +33,6 @@ body img {
 
 .nav-container {
   background: #fff;
-  position: relative;
 }
 
 .list {
@@ -178,6 +177,8 @@ header .line {
   -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
           box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
   cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .construction .arrow,
@@ -241,6 +242,121 @@ header .line {
   display: none;
 }
 
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.info .address span,
+.info .bank span {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1.3em;
+  letter-spacing: 0.05em;
+  text-align: left;
+  line-height: 60px;
+}
+
+.info p {
+  line-height: 30px;
+  text-align: left;
+  font-size: 16px;
+  padding: 0 2em;
+  margin: 0;
+  color: #272a35;
+  text-align: left;
+}
+
+.info .address,
+.info .bank {
+  text-align: left;
+}
+
+.info .address {
+  margin: 0 0 2em 0;
+}
+
+.contacts_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contacts_info .contacts {
+  width: 100%;
+  cursor: auto;
+}
+
+.contacts_info:hover {
+  -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+          box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: left;
+}
+
+form label,
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  color: #272a35;
+  background-color: #d3d7e5;
+  border: none;
+  outline: none;
+  padding: 0.3em;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+form label {
+  margin: 1.2em 0 0 0;
+  background-color: #fff;
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: #272a35;
+  color: #d3d7e5;
+}
+
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 16px;
+  display: inline-block;
+  background-color: #272a35;
+  border: none;
+  color: #d3d7e5;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #d3d7e5;
+  color: #272a35;
+}
+
+.contacts_info .content {
+  display: none;
+}
+
+.content.visible {
+  display: block;
+}
+
 footer {
   text-align: center;
   padding: 0.5em;
@@ -283,6 +399,22 @@ footer a {
   }
   .nav-burger {
     display: none;
+  }
+  .list a {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#272a35));
+    background-image: linear-gradient(#272a35);
+    background-size: 0% 0.1em;
+    background-position-y: 100%;
+    background-position-x: 0%;
+    background-repeat: no-repeat;
+    -webkit-transition: background-size 0.2s ease-in-out;
+    transition: background-size 0.2s ease-in-out;
+    text-decoration: none;
+  }
+  .list a:hover,
+  .list a:focus,
+  .list a:active {
+    background-size: 100% 0.1em;
   }
   .welcome p {
     width: 90%;
@@ -329,11 +461,47 @@ footer a {
     width: 5em;
     fill: #272a35;
   }
-  .construction,
-  .doorsWindows,
-  .realEstate,
-  .contacts_info {
-    display: none;
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 60%;
+  }
+  .info p {
+    width: 300px;
+  }
+  .info form {
+    padding: 0em 2em 2em 2em;
+  }
+  .info form label:nth-child(1) {
+    margin-top: 0;
+  }
+  .info.main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: unset;
+  }
+  .info.main p {
+    width: unset;
+  }
+  .info.main form {
+    padding: 0em 2em 2em 2em;
+  }
+  .info.main form label:nth-child(1) {
+    margin-top: 0;
   }
 }
 
@@ -347,22 +515,6 @@ footer a {
   header {
     margin: 0 auto;
     max-width: 1370px;
-  }
-  .list a {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#272a35));
-    background-image: linear-gradient(#272a35);
-    background-size: 0% 0.1em;
-    background-position-y: 100%;
-    background-position-x: 0%;
-    background-repeat: no-repeat;
-    -webkit-transition: background-size 0.2s ease-in-out;
-    transition: background-size 0.2s ease-in-out;
-    text-decoration: none;
-  }
-  .list a:hover,
-  .list a:focus,
-  .list a:active {
-    background-size: 100% 0.1em;
   }
   .welcome {
     height: 700px;
@@ -497,10 +649,6 @@ footer a {
   }
   div.info > p {
     color: #272a35;
-  }
-  .contacts_info:hover {
-    -webkit-box-shadow: unset;
-            box-shadow: unset;
   }
   .contacts_img {
     display: none;
