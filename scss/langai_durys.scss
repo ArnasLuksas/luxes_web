@@ -1,0 +1,57 @@
+.langaiDurys_about {
+  display: none;
+}
+
+main {
+  display: flex;
+  //   justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  //   padding-top: 0em;
+}
+.langaiDurys_content {
+  //   padding: 1em 1em 2em 1em;
+  padding: 2em 0;
+  margin: 2em;
+  text-align: left;
+  color: #272a35;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  .langaiDurys_description,
+  .langaiDurys_services {
+    padding: 0 2em;
+  }
+  .langaiDurys_services {
+    padding-bottom: 1.5em;
+    text-align: center;
+    img {
+      max-width: 300px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #272a35;
+  }
+
+  .langaiDurys_title {
+    padding-top: 2em;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: -2em;
+  }
+
+  .langaiDurys_image {
+    display: none;
+  }
+}
+
+div:nth-child(2) > p.langaiDurys_title {
+  //   color: red;
+  margin-top: 3em;
+  margin-bottom: -0.5em;
+}
+.langaiDurys_description > p {
+  text-align: left;
+}

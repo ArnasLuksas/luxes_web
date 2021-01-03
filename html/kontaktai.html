@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="/scss/main.css" />
     <title>luxes</title>
   </head>
   <body>
     <div class="nav-container">
       <header>
-        <a href="index.html" class="logo">
+        <a href="/index.html" class="logo">
           <svg width="149" height="124" viewBox="0 0 149 124">
             <defs>
               <clipPath id="clip-path">
@@ -67,14 +67,18 @@
         </nav>
       </header>
     </div>
-    <section class="welcome">
+    <section class="welcome welcome-contacts">
       <div>
-        <img src="/images/house.jpg" alt="Namas vakare su apsvietimu" />
+        <img
+          class="img-contact"
+          src="/images/contact.jpg"
+          alt="Namas vakare su apsvietimu"
+        />
         <p>Kontaktai</p>
       </div>
     </section>
     <main>
-      <div class="contacts_info">
+      <div class="contacts_info bg">
         <section class="contacts">
           <!-- <svg
             class="contacts_img"
@@ -217,7 +221,7 @@
           </div>
           <iframe
             width="100%"
-            height="300px"
+            height="500px"
             id="mapcanvas"
             src="https://maps.google.com/maps?q=Daugeliskio%2032%20Vilnius%20Lithuania&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
             frameborder="0"
@@ -245,7 +249,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="footer">
       &copy; <a href="www.luxes.lt">www.luxes.lt</a> | 2020 - 2021 |
     </footer>
     <script src="/js/main.js"></script>

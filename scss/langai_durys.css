@@ -1,0 +1,67 @@
+.langaiDurys_about {
+  display: none;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.langaiDurys_content {
+  padding: 2em 0;
+  margin: 2em;
+  text-align: left;
+  color: #272a35;
+  border-radius: 1em;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+          box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+}
+
+.langaiDurys_content .langaiDurys_description,
+.langaiDurys_content .langaiDurys_services {
+  padding: 0 2em;
+}
+
+.langaiDurys_content .langaiDurys_services {
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
+.langaiDurys_content .langaiDurys_services img {
+  max-width: 300px;
+}
+
+.langaiDurys_content p {
+  font-size: 16px;
+  color: #272a35;
+}
+
+.langaiDurys_content .langaiDurys_title {
+  padding-top: 2em;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: -2em;
+}
+
+.langaiDurys_content .langaiDurys_image {
+  display: none;
+}
+
+div:nth-child(2) > p.langaiDurys_title {
+  margin-top: 3em;
+  margin-bottom: -0.5em;
+}
+
+.langaiDurys_description > p {
+  text-align: left;
+}
+/*# sourceMappingURL=langai_durys.css.map */
