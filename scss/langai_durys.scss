@@ -4,13 +4,10 @@
 
 main {
   display: flex;
-  //   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-  //   padding-top: 0em;
 }
 .langaiDurys_content {
-  //   padding: 1em 1em 2em 1em;
   padding: 2em 0;
   margin: 2em;
   text-align: left;
@@ -23,7 +20,6 @@ main {
     padding: 0 2em;
   }
   .langaiDurys_services {
-    padding-bottom: 1.5em;
     text-align: center;
     img {
       max-width: 300px;
@@ -37,21 +33,77 @@ main {
 
   .langaiDurys_title {
     padding-top: 2em;
+    // padding: 0.5em;
     font-size: 16px;
-    font-weight: 600;
-    margin-bottom: -2em;
+    // margin: 2em 0;
+    // font-size: 1.7em;
+    // font-weight: 700;
+    letter-spacing: 0.1em;
+    // transform: translate(51%, 20%);
+    // border: 3px solid black;
+    // width: 250px;
   }
 
   .langaiDurys_image {
     display: none;
   }
 }
-
-div:nth-child(2) > p.langaiDurys_title {
-  //   color: red;
-  margin-top: 3em;
-  margin-bottom: -0.5em;
+.langaiDurys_description span {
+  font-weight: bold;
+  letter-spacing: 0.1em;
 }
+.langaiDurys_services .wooden {
+  width: 250px;
+  height: 269px;
+}
+.langaiDurys_services .aluminium {
+  width: 250px;
+}
+.langaiDurys_services .plastic {
+  width: 250px;
+}
+.langaiDurys_services .door {
+  width: 250px;
+  margin-bottom: 2em;
+}
+
 .langaiDurys_description > p {
-  text-align: left;
+  text-align: center;
+  max-width: 601px;
+  line-height: 2em;
+}
+
+@media (min-width: 768px) {
+  .langaiDurys_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .langaiDurys_description > p,
+  .langaiDurys_services .wooden,
+  .langaiDurys_services .aluminium,
+  .langaiDurys_services .plastic,
+  .langaiDurys_services .door {
+    margin: 0em 3em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .langaiDurys_content {
+    max-width: 1440px;
+    padding: 4em 0;
+    .langaiDurys_services {
+      margin: 2em 0;
+    }
+  }
+  .langaiDurys_description > p,
+  .langaiDurys_services .wooden,
+  .langaiDurys_services .aluminium,
+  .langaiDurys_services .plastic,
+  .langaiDurys_services .door {
+    margin: 0em 8em;
+  }
 }
