@@ -16,8 +16,6 @@ main {
 }
 
 .langaiDurys_content {
-  padding: 2em 0;
-  margin: 2em;
   text-align: left;
   color: #272a35;
   border-radius: 1em;
@@ -26,16 +24,30 @@ main {
           box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
 }
 
-.langaiDurys_content .langaiDurys_description,
-.langaiDurys_content .langaiDurys_services {
-  padding: 0 2em;
+.langaiDurys_content .langaiDurys_services > div:hover,
+.langaiDurys_content .langaiDurys_services > .door:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
 
-.langaiDurys_content .langaiDurys_services {
+.langaiDurys_content .langaiDurys_services > div {
   text-align: center;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.langaiDurys_content .langaiDurys_services img {
+.langaiDurys_content .langaiDurys_services > div img {
   max-width: 300px;
 }
 
@@ -61,7 +73,6 @@ main {
 
 .langaiDurys_services .wooden {
   width: 250px;
-  height: 269px;
 }
 
 .langaiDurys_services .aluminium {
@@ -74,13 +85,21 @@ main {
 
 .langaiDurys_services .door {
   width: 250px;
+  height: 600px;
   margin-bottom: 2em;
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+  padding-bottom: 3em;
 }
 
 .langaiDurys_description > p {
-  text-align: center;
-  max-width: 601px;
-  line-height: 2em;
+  text-align: justify;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  line-height: 1.5em;
+  font-size: 20px;
+  padding: 0 9em;
 }
 
 @media (min-width: 768px) {
@@ -107,19 +126,38 @@ main {
 }
 
 @media (min-width: 1200px) {
+  main {
+    padding: 6em 0 0 0;
+  }
   .langaiDurys_content {
     max-width: 1440px;
-    padding: 4em 0;
+    margin-bottom: 6em;
   }
   .langaiDurys_content .langaiDurys_services {
-    margin: 2em 0;
+    margin: 4em 1em 2em 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .langaiDurys_description > p,
-  .langaiDurys_services .wooden,
-  .langaiDurys_services .aluminium,
-  .langaiDurys_services .plastic,
-  .langaiDurys_services .door {
-    margin: 0em 8em;
+  .langaiDurys_services > div img {
+    height: 270px;
+  }
+  .langaiDurys_description p {
+    text-align: justify;
+    -webkit-hyphens: none;
+        -ms-hyphens: none;
+            hyphens: none;
+    line-height: 1.5em;
+    font-size: 20px;
+    padding-top: 3em;
+  }
+  .langaiDurys_content .langaiDurys_title {
+    font-size: 18px;
+    padding-top: 0em;
   }
 }
 /*# sourceMappingURL=langai_durys.css.map */

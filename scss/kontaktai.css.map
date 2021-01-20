@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,AAAA,MAAM;AACnB,aAAa,AAAA,MAAM;AACnB,WAAW,AAAA,MAAM;AACjB,cAAc,AAAA,MAAM;AACpB,oBAAoB,AAAA,MAAM;AAC1B,oBAAoB,AAAA,MAAM;AAC1B,kBAAkB,AAAA,MAAM,CAAC;EACvB,SAAS,EAAE,KAAK;EAChB,UAAU,EAAE,WAAW;CACxB",
+    "sources": [
+        "kontaktai.scss"
+    ],
+    "names": [],
+    "file": "kontaktai.css"
+}

@@ -1,0 +1,30 @@
+.mediniai_content {
+  padding: 2em 0;
+  margin: 2em;
+  text-align: left;
+  color: #272a35;
+  border-radius: 1em;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+}
+
+.mediniai_content .mediniai_small {
+  padding: 2em 0;
+}
+
+.mediniai_description p {
+  padding: 0 2em;
+}
+
+.mediniai_title {
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 350px;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin: 1em auto;
+  letter-spacing: 0.5px;
+}
+/*# sourceMappingURL=mediniai_langai.css.map */

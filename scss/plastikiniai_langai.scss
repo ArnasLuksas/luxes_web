@@ -1,0 +1,200 @@
+main {
+  display: flex;
+  //   justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  //   padding-top: 0em;
+}
+.plastikiniai_content {
+  padding: 2em 0;
+  margin: 2em;
+  text-align: left;
+  color: #272a35;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  .plastikiniai_description,
+  .plastikiniai_services {
+    // padding: 0 2em;
+  }
+  .plastikiniai_description p {
+    padding: 0 2em;
+  }
+  .plastikiniai_services {
+    padding-bottom: 1.5em;
+  }
+
+  p {
+    font-size: 16px;
+    color: #272a35;
+    // padding: 0 10em 0 0;
+    // margin: 0;
+
+    // padding: 2em 0;
+    // margin: 2em;
+    // text-align: left;
+    // color: #272a35;
+    // border-radius: 1em;
+    // background: #fff;
+    // box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  }
+
+  .plastikiniai_title {
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 350px;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 1em auto;
+    letter-spacing: 0.5px;
+    // padding: unset;
+  }
+  .plastikiniai_image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .plastic_big {
+    display: none;
+  }
+  .plastic_small {
+    // width: 100%;
+    padding: 2em 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .plastikiniai_description {
+  }
+
+  .plastikiniai_content {
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: flex-end;
+    // align-items: center;
+    padding: 4em 2em;
+    margin-bottom: 6em;
+    // box-shadow: unset;
+    // background: unset;
+
+    .plastikiniai_image {
+      flex-direction: row;
+      justify-content: flex-start;
+      grid-area: plastikiniai_image;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .plastikiniai_content {
+    max-width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: flex-end;
+    // align-items: center;
+    padding: 4em 2em;
+    margin-bottom: 6em;
+    // box-shadow: unset;
+    // background: unset;
+    .plastikiniai_image {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .plastikiniai_services {
+      padding-left: 4.7em;
+    }
+  }
+  .plastikiniai_description,
+  .plastikiniai_services {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: right;
+    width: 51%;
+    // padding: 0 0em 0 0;
+    line-height: 2em;
+    .plastikiniai_title {
+      padding-top: 0em;
+      line-height: normal;
+    }
+  }
+
+  .plastikiniai_description {
+    // line-height: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    // align-items: center;
+    // text-align: right;
+    // justify-content: center;
+    p {
+      // width: 100%;
+      // padding: 2.5em;
+      // height: 350px;
+      // display: flex;
+
+      // justify-content: center;
+      // align-items: center;
+
+      // padding: 2em 0;
+      // margin: 2em;
+      // text-align: left;
+      // color: #272a35;
+      // border-radius: 1em;
+      // background: #fff;
+      // box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 4em 0 0 0;
+  }
+  .plastikiniai_content {
+    display: grid;
+    padding-right: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "description image"
+      "services .";
+    .plastikiniai_image {
+      display: flex;
+      justify-content: flex-end;
+    }
+    img {
+      width: 100%;
+      max-height: 550px;
+    }
+    .plastic_small {
+      display: none;
+    }
+    .plastic_big {
+      display: flex;
+    }
+  }
+  .plastikiniai_description {
+    grid-area: description;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+  }
+  .plastikiniai_image {
+    grid-area: image;
+    width: 100%;
+  }
+
+  .plastikiniai_services {
+    grid-area: services;
+    width: 100%;
+
+    margin-top: -380px;
+    margin-left: -43px;
+  }
+}

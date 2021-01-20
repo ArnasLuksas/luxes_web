@@ -1,15 +1,15 @@
 //mobile menu
-var burger = document.querySelector(".nav-burger");
-var list = document.querySelector(".list");
+const burger = document.querySelector(".nav-burger");
+const list = document.querySelector(".list");
 var body = document.querySelector("body");
 
-function toggleNav() {
+const toggleNav = () => {
   list.classList.toggle("open");
-  var navIsOpen = list.classList.contains("open");
+  const navIsOpen = list.classList.contains("open");
   if (navIsOpen) {
     body.style.overflow = "hidden";
   } else {
     body.style.overflow = "scroll";
   }
-}
+};
 burger.addEventListener("click", toggleNav);

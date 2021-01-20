@@ -1,0 +1,13 @@
+.construction:hover,
+.doorsWindows:hover,
+.realEstate:hover,
+.contacts_info:hover,
+.construction_tablet:hover,
+.doorsWindows_tablet:hover,
+.realEstate_tablet:hover {
+  -webkit-transform: unset;
+          transform: unset;
+  -webkit-transition: unset unset;
+  transition: unset unset;
+}
+/*# sourceMappingURL=kontaktai.css.map */

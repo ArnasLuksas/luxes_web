@@ -118,7 +118,7 @@ header .line {
 }
 
 .welcome img {
-  max-height: 600px;
+  max-height: 600p x;
 }
 
 .welcome p {
@@ -146,6 +146,24 @@ header .line {
   margin-bottom: 4em;
 }
 
+.tablet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .construction,
 .doorsWindows,
 .realEstate,
@@ -165,10 +183,11 @@ header .line {
       -ms-flex-align: center;
           align-items: center;
   padding: 3em 0;
-  margin: 2em 2em 2em 2em;
+  margin: 2em;
   text-align: center;
   color: #272a35;
   border-radius: 1em;
+  width: 350px;
   background: #fff;
   -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
           box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
@@ -223,15 +242,32 @@ header .line {
   display: none;
 }
 
+.contacts_tablet {
+  -webkit-transition: 300ms ease-out;
+  transition: 300ms ease-out;
+}
+
+.contacts_tablet:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  -webkit-box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+          box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+}
+
 .construction:hover,
 .doorsWindows:hover,
 .realEstate:hover,
-.contacts_info:hover,
 .construction_tablet:hover,
 .doorsWindows_tablet:hover,
 .realEstate_tablet:hover {
   -webkit-box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
           box-shadow: 0px 5px 5px #c6c6c6, -5px -5px 5px #ffffff;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
 }
 
 .info {
@@ -281,6 +317,10 @@ header .line {
   -webkit-transition: 300ms ease-out;
   transition: 300ms ease-out;
   max-width: 290px;
+}
+
+.object img {
+  height: 290px;
 }
 
 .object:hover {
@@ -469,17 +509,6 @@ footer a {
   text-decoration: underline;
 }
 
-@media (min-width: 768px) {
-  .welcome p {
-    padding: 1em 0em;
-    -webkit-transform: translate(-50%, -70%);
-            transform: translate(-50%, -70%);
-    font-size: 2.5em;
-    width: 80%;
-    max-width: 650px;
-  }
-}
-
 .our_services {
   display: none;
 }
@@ -533,35 +562,34 @@ footer a {
     max-width: 650px;
   }
   .tablet {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
         grid-template-areas: "construction_tablet doorsWindows_tablet" "realEstate_tablet contacts_tablet";
   }
   .construction_tablet {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: construction_tablet;
-    margin: 2em 1em 1em 2em;
+    margin: 2em;
   }
   .doorsWindows_tablet {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: doorsWindows_tablet;
-    margin: 2em 2em 1em 1em;
+    margin: 2em;
   }
   .realEstate_tablet {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: realEstate_tablet;
-    margin: 1em 1em 2em 2em;
+    margin: 2em;
   }
   .contacts_tablet {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: contacts_tablet;
-    margin: 1em 2em 2em 1em;
+    margin: 2em;
   }
   .arrow {
     width: 2em;
@@ -622,6 +650,11 @@ footer a {
 }
 
 @media (min-width: 992px) and (min-width: 1200px) {
+  .construction,
+  .doorsWindows,
+  .realEstate {
+    width: unset;
+  }
   .construction,
   .doorsWindows,
   .realEstate,
@@ -816,12 +849,6 @@ div.info > p {
     width: 100%;
     margin: 6em 0 0 0;
     background-color: #d3d7e5;
-  }
-  .projects_gallery .title {
-    border: 3px solid #272a35;
-    -webkit-transform: translate(80%, 0%);
-            transform: translate(80%, 0%);
-    width: 38.5%;
   }
   .projects {
     max-width: 1440px;

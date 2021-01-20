@@ -5,7 +5,8 @@ const lightboxImage = document.querySelectorAll(".object img");
 // selecting image modal popup div
 const modalPopup = document.querySelector(".image-modal-popup");
 //selecting body (using var bacause with const I get error about body(because of safari))
-var body = document.querySelector("body");
+//select main, body doesnt workng because I use it for navigation overflow.
+var main = document.querySelector("main");
 
 // dynamically selects all elements inside modal popup
 const modalElement = (element) =>
@@ -13,14 +14,14 @@ const modalElement = (element) =>
 
 // closes modal on clicking anywhere and adds overflow back
 document.addEventListener("click", () => {
-  body.style.overflow = "auto";
+  main.style.overflow = "auto";
   modalPopup.style.display = "none";
 });
 // loops over each modal content img and adds click event functionality
 lightboxImage.forEach((img) => {
-  //   const data = img.dataset;
+  // const data = img.dataset;
   img.addEventListener("click", (e) => {
-    body.style.overflow = "hidden";
+    main.style.overflow = "hidden";
     e.stopPropagation();
     modalPopup.style.display = "block";
     // modalElement("h1").innerHTML = data.title;

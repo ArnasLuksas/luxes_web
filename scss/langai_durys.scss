@@ -8,19 +8,29 @@ main {
   flex-direction: column;
 }
 .langaiDurys_content {
-  padding: 2em 0;
-  margin: 2em;
+  // padding: 2em 0;
+  // margin: 2em;
   text-align: left;
   color: #272a35;
   border-radius: 1em;
   background: #fff;
   box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
+  .langaiDurys_services > div:hover,
+  .langaiDurys_services > .door:hover {
+    transform: scale(1.03);
+    transition: 300ms ease-in;
+  }
+
   .langaiDurys_description,
   .langaiDurys_services {
-    padding: 0 2em;
+    // padding: 0 2em;
   }
-  .langaiDurys_services {
+  .langaiDurys_services > div {
     text-align: center;
+    transition: 300ms ease-out;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     img {
       max-width: 300px;
     }
@@ -54,7 +64,7 @@ main {
 }
 .langaiDurys_services .wooden {
   width: 250px;
-  height: 269px;
+  // height: 269px;
 }
 .langaiDurys_services .aluminium {
   width: 250px;
@@ -64,13 +74,18 @@ main {
 }
 .langaiDurys_services .door {
   width: 250px;
+  height: 600px;
   margin-bottom: 2em;
+  transition: 300ms ease-out;
+  padding-bottom: 3em;
 }
 
 .langaiDurys_description > p {
-  text-align: center;
-  max-width: 601px;
-  line-height: 2em;
+  text-align: justify;
+  hyphens: none;
+  line-height: 1.5em;
+  font-size: 20px;
+  padding: 0 9em;
 }
 
 @media (min-width: 768px) {
@@ -92,18 +107,36 @@ main {
 }
 
 @media (min-width: 1200px) {
+  main {
+    padding: 6em 0 0 0;
+  }
   .langaiDurys_content {
     max-width: 1440px;
-    padding: 4em 0;
+    // padding: 0 0;
+    margin-bottom: 6em;
     .langaiDurys_services {
-      margin: 2em 0;
+      margin: 4em 1em 2em 1em;
+      // width: 350px;
+      display: flex;
+      flex-direction: row;
     }
   }
-  .langaiDurys_description > p,
-  .langaiDurys_services .wooden,
-  .langaiDurys_services .aluminium,
-  .langaiDurys_services .plastic,
-  .langaiDurys_services .door {
-    margin: 0em 8em;
+  .langaiDurys_services > div img {
+    height: 270px;
+  }
+  .langaiDurys_description p {
+    text-align: justify;
+    hyphens: none;
+    line-height: 1.5em;
+    font-size: 20px;
+    // padding: 0 9em;
+    padding-top: 3em;
+  }
+  // .langaiDurys_description > p {
+
+  // }
+  .langaiDurys_content .langaiDurys_title {
+    font-size: 18px;
+    padding-top: 0em;
   }
 }
