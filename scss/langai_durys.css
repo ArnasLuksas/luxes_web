@@ -16,8 +16,13 @@ main {
 }
 
 .langaiDurys_content {
-  text-align: left;
-  color: #272a35;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2em;
+  max-width: 350px;
   border-radius: 1em;
   background: #fff;
   -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
@@ -32,7 +37,13 @@ main {
   transition: 300ms ease-in;
 }
 
-.langaiDurys_content .langaiDurys_services > div {
+.langaiDurys_description,
+.langaiDurys_services {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.langaiDurys_services > div {
   text-align: center;
   -webkit-transition: 300ms ease-out;
   transition: 300ms ease-out;
@@ -47,22 +58,22 @@ main {
           flex-direction: column;
 }
 
-.langaiDurys_content .langaiDurys_services > div img {
+.langaiDurys_services > div img {
   max-width: 300px;
 }
 
-.langaiDurys_content p {
+p {
   font-size: 16px;
   color: #272a35;
 }
 
-.langaiDurys_content .langaiDurys_title {
+.langaiDurys_title {
   padding-top: 2em;
   font-size: 16px;
   letter-spacing: 0.1em;
 }
 
-.langaiDurys_content .langaiDurys_image {
+.langaiDurys_image {
   display: none;
 }
 
@@ -72,60 +83,102 @@ main {
 }
 
 .langaiDurys_services .wooden {
-  width: 250px;
+  max-width: 260px;
+  padding: 0 2em;
+  height: 207px;
 }
 
 .langaiDurys_services .aluminium {
-  width: 250px;
+  max-width: 260px;
+  padding: 0 2em;
+  height: 207px;
 }
 
 .langaiDurys_services .plastic {
-  width: 250px;
+  max-width: 260px;
+  padding: 0 2em;
 }
 
 .langaiDurys_services .door {
-  width: 250px;
-  height: 600px;
-  margin-bottom: 2em;
+  height: 450px;
   -webkit-transition: 300ms ease-out;
   transition: 300ms ease-out;
   padding-bottom: 3em;
+  max-width: 260px;
+  padding: 0 2em 3em 2em;
 }
 
-.langaiDurys_description > p {
-  text-align: justify;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
-  line-height: 1.5em;
-  font-size: 20px;
-  padding: 0 9em;
-}
-
-@media (min-width: 768px) {
+@media (min-width: 828px) {
+  main {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
   .langaiDurys_content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 927px;
+    margin: 2em auto;
+  }
+  .langaiDurys_services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: unset;
   }
-}
-
-@media (min-width: 992px) {
-  .langaiDurys_description > p,
-  .langaiDurys_services .wooden,
-  .langaiDurys_services .aluminium,
-  .langaiDurys_services .plastic,
+  .langaiDurys_services .wooden {
+    width: 260px;
+    padding: 0 2em;
+    height: 207px;
+  }
+  .langaiDurys_services .aluminium {
+    width: 260px;
+    padding: 0 2em;
+    height: 207px;
+  }
+  .langaiDurys_services .plastic {
+    width: 260px;
+    padding: 0 2em;
+    height: 207px;
+  }
   .langaiDurys_services .door {
-    margin: 0em 3em;
+    height: 450px;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+    padding-bottom: 3em;
+    width: 260px;
+    padding: 0 2em 3em 2em;
   }
 }
 
 @media (min-width: 1200px) {
+  .langai_durys_contrainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .langaiDurys_content {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 2em 6em 2em;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
   main {
     padding: 6em 0 0 0;
   }

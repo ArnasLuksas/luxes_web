@@ -96,7 +96,7 @@ header {
   position: relative;
 
   img {
-    max-height: 600p x;
+    max-height: 600px;
   }
   p {
     position: absolute;
@@ -131,10 +131,16 @@ main {
 }
 .tablet {
   display: flex;
-  flex-direction: row;
+  // flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  // margin: 0 2em;
   justify-content: center;
+  a {
+    width: 100%;
+    max-width: 350px;
+    margin: 0em 2em 0em 2em;
+  }
 }
 .construction,
 .doorsWindows,
@@ -147,12 +153,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3em 0;
-  margin: 2em;
+  padding: 3em 2em;
+  margin: 2em 0;
   text-align: center;
   color: #272a35;
   border-radius: 1em;
-  width: 350px;
+  // max-width: 350px;
+
+  // flex-wrap: nowrap;
   // width: 90%;
   background: #fff;
   box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
@@ -234,9 +242,10 @@ main {
   margin: 1em;
   cursor: pointer;
   transition: 300ms ease-out;
-  max-width: 290px;
+  // width: 100%;
   img {
     height: 290px;
+    width: 350px;
   }
 }
 .object:hover {
@@ -468,31 +477,31 @@ footer {
   }
   // tablet  -----------------------------------------------------
 
-  .tablet {
-    // display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    grid-template-areas:
-      "construction_tablet doorsWindows_tablet"
-      "realEstate_tablet contacts_tablet";
-  }
+  // .tablet {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   justify-items: center;
+  //   grid-template-areas:
+  //     "construction_tablet doorsWindows_tablet"
+  //     "realEstate_tablet contacts_tablet";
+  // }
 
-  .construction_tablet {
-    grid-area: construction_tablet;
-    margin: 2em;
-  }
-  .doorsWindows_tablet {
-    grid-area: doorsWindows_tablet;
-    margin: 2em;
-  }
-  .realEstate_tablet {
-    grid-area: realEstate_tablet;
-    margin: 2em;
-  }
-  .contacts_tablet {
-    grid-area: contacts_tablet;
-    margin: 2em;
-  }
+  // .construction_tablet {
+  //   grid-area: construction_tablet;
+  //   margin: 2em;
+  // }
+  // .doorsWindows_tablet {
+  //   grid-area: doorsWindows_tablet;
+  //   margin: 2em;
+  // }
+  // .realEstate_tablet {
+  //   grid-area: realEstate_tablet;
+  //   margin: 2em;
+  // }
+  // .contacts_tablet {
+  //   grid-area: contacts_tablet;
+  //   margin: 2em;
+  // }
   .arrow {
     width: 2em;
   }
@@ -507,73 +516,74 @@ footer {
 
   // main -----------------------------------------------------
   .contacts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   justify-content: space-between;
+    // }
 
-  .info {
-    flex-direction: column;
-    width: 60%;
-    p {
-      width: 300px;
-    }
-    form {
-      padding: 0em 2em 2em 2em;
-      label:nth-child(1) {
-        margin-top: 0;
+    .info {
+      flex-direction: column;
+      // width: 60%;
+      p {
+        width: 300px;
+      }
+      form {
+        padding: 0em 2em 2em 2em;
+        label:nth-child(1) {
+          margin-top: 0;
+        }
       }
     }
-  }
-  .info.main {
-    flex-direction: column;
-    width: unset;
-    p {
+    .info.main {
+      flex-direction: column;
       width: unset;
-    }
-    form {
-      padding: 0em 2em 2em 2em;
-      label:nth-child(1) {
-        margin-top: 0;
+      p {
+        width: unset;
+      }
+      form {
+        padding: 0em 2em 2em 2em;
+        label:nth-child(1) {
+          margin-top: 0;
+        }
       }
     }
-  }
 
-  // .info {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   .address span,
-  //   .bank span {
-  //     font-size: 1.5em;
-  //     padding-bottom: 0.5em;
-  //     padding-left: 1.3em;
-  //     letter-spacing: 0.05em;
-  //     text-align: left;
-  //     line-height: 60px;
-  //   }
-  //   p {
-  //     line-height: 30px;
-  //     text-align: left;
-  //     font-size: 16px;
-  //     padding: 0 2em;
-  //     margin: 0;
-  //     color: #272a35;
-  //     text-align: left;
-  //   }
-  //   .address,
-  //   .bank {
-  //     text-align: left;
-  //     padding-top: 30px;
-  //   }
-  // }
-  .welcome-contacts {
-    height: 390px;
-    overflow: hidden;
+    // .info {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   .address span,
+    //   .bank span {
+    //     font-size: 1.5em;
+    //     padding-bottom: 0.5em;
+    //     padding-left: 1.3em;
+    //     letter-spacing: 0.05em;
+    //     text-align: left;
+    //     line-height: 60px;
+    //   }
+    //   p {
+    //     line-height: 30px;
+    //     text-align: left;
+    //     font-size: 16px;
+    //     padding: 0 2em;
+    //     margin: 0;
+    //     color: #272a35;
+    //     text-align: left;
+    //   }
+    //   .address,
+    //   .bank {
+    //     text-align: left;
+    //     padding-top: 30px;
+    //   }
+    // }
+    .welcome-contacts {
+      height: 390px;
+      overflow: hidden;
 
-    .img-contact {
-      // position: relative;
-      // max-height: 900px;
-      // bottom: 460px;
+      .img-contact {
+        // position: relative;
+        // max-height: 900px;
+        // bottom: 460px;
+      }
     }
   }
 
@@ -639,36 +649,46 @@ footer {
     // main start-----------------------------------------------------
 
     main {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-areas:
-        "construction  doorsWindows  realEstate"
-        "projects_gallery projects_gallery projects_gallery"
-        "contacts_info contacts_info contacts_info";
+      // grid-template-columns: repeat(1, 1fr);
+      // grid-template-areas:
+      //   "construction  doorsWindows  realEstate"
+      //   "projects_gallery projects_gallery projects_gallery"
+      //   "contacts_info contacts_info contacts_info";
       padding: 6em 0 0 0;
       margin: 0 auto;
     }
     // services-----------------------------------------------------
 
     .our_services {
-      display: grid;
+      display: flex;
       max-width: 1440px;
       margin: 0 auto;
-      grid-gap: 2em;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "construction doorsWindows realEstate";
-      padding: 0 2em;
+      // margin: 0 2em;
+      justify-content: center;
+      flex-direction: row;
+      // grid-gap: 2em;
+      // grid-template-columns: repeat(3, 1fr);
+      // grid-template-areas: "construction doorsWindows realEstate";
+      // padding: 0 2em;
+      a {
+        // width: 100%;
+        margin: 0 2em;
+        width: 350px;
+        // min-width: 320px;
+        // max-width: 430px;
+      }
     }
 
     .construction {
-      grid-area: construction;
+      // grid-area: construction;
       margin: unset;
     }
     .doorsWindows {
-      grid-area: doorsWindows;
+      // grid-area: doorsWindows;
       margin: unset;
     }
     .realEstate {
-      grid-area: realEstate;
+      // grid-area: realEstate;
       margin: unset;
     }
     .construction,
@@ -681,7 +701,7 @@ footer {
         color: #272a35;
         padding: 1em 0 1em 0;
         margin: unset;
-        letter-spacing: 0.05em;
+        // letter-spacing: 0.05em;
       }
     }
     .construction .content,
@@ -694,28 +714,37 @@ footer {
       }
     }
     // contacts-----------------------------------------------------
+    // main .contacts_info {
+    //   display: block;
+    //   // justify-content: center;
+    //   // align-items: center;
+    //   // align-self: center;
+    //   // width: 100%;
+    // }
     main .contacts_info {
-      display: block;
-    }
-    .contacts_info {
-      grid-area: contacts_info;
+      display: flex;
+      // grid-area: contacts_info;
       // box-shadow: unset;
       cursor: unset;
-      text-align: left;
-      align-items: flex-end;
+      // text-align: right;
+      // align-items: flex-end;
       background-color: #272a35;
       border-radius: unset;
-      width: 100%;
+      // width: 100%;
       margin: 0;
       // .title {
       //   display: none;
       // }
       .contacts {
+        // max-width: 1440px;
+        // margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
         max-width: 1440px;
         margin: 0 auto;
         .content {
-          display: flex;
-          justify-content: flex-start;
+          // display: flex;
+          // justify-content: flex-start;
           color: #d3d7e5;
         }
       }
@@ -820,10 +849,13 @@ footer {
       margin-top: 3em;
     }
     .gallery {
-      display: grid;
-      grid-gap: 2em;
-      grid-template-columns: repeat(4, 1fr);
-      margin: 2em 2em 0em 2em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      // grid-gap: 2em;
+      // grid-template-columns: repeat(4, 1fr);
+      // margin: 2em 2em 0em 2em;
+      // margin: 0 2em;
     }
 
     form label {

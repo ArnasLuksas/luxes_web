@@ -118,7 +118,7 @@ header .line {
 }
 
 .welcome img {
-  max-height: 600p x;
+  max-height: 600px;
 }
 
 .welcome p {
@@ -150,10 +150,6 @@ header .line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -162,6 +158,12 @@ header .line {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.tablet a {
+  width: 100%;
+  max-width: 350px;
+  margin: 0em 2em 0em 2em;
 }
 
 .construction,
@@ -182,12 +184,11 @@ header .line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3em 0;
-  margin: 2em;
+  padding: 3em 2em;
+  margin: 2em 0;
   text-align: center;
   color: #272a35;
   border-radius: 1em;
-  width: 350px;
   background: #fff;
   -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
           box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
@@ -316,11 +317,11 @@ header .line {
   cursor: pointer;
   -webkit-transition: 300ms ease-out;
   transition: 300ms ease-out;
-  max-width: 290px;
 }
 
 .object img {
   height: 290px;
+  width: 350px;
 }
 
 .object:hover {
@@ -561,36 +562,6 @@ footer a {
     width: 90%;
     max-width: 650px;
   }
-  .tablet {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-        grid-template-areas: "construction_tablet doorsWindows_tablet" "realEstate_tablet contacts_tablet";
-  }
-  .construction_tablet {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: construction_tablet;
-    margin: 2em;
-  }
-  .doorsWindows_tablet {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: doorsWindows_tablet;
-    margin: 2em;
-  }
-  .realEstate_tablet {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: realEstate_tablet;
-    margin: 2em;
-  }
-  .contacts_tablet {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: contacts_tablet;
-    margin: 2em;
-  }
   .arrow {
     width: 2em;
   }
@@ -601,49 +572,38 @@ footer a {
     width: 5em;
     fill: #272a35;
   }
-  .contacts {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .info {
+  .contacts .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 60%;
   }
-  .info p {
+  .contacts .info p {
     width: 300px;
   }
-  .info form {
+  .contacts .info form {
     padding: 0em 2em 2em 2em;
   }
-  .info form label:nth-child(1) {
+  .contacts .info form label:nth-child(1) {
     margin-top: 0;
   }
-  .info.main {
+  .contacts .info.main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     width: unset;
   }
-  .info.main p {
+  .contacts .info.main p {
     width: unset;
   }
-  .info.main form {
+  .contacts .info.main form {
     padding: 0em 2em 2em 2em;
   }
-  .info.main form label:nth-child(1) {
+  .contacts .info.main form label:nth-child(1) {
     margin-top: 0;
   }
-  .welcome-contacts {
+  .contacts .welcome-contacts {
     height: 390px;
     overflow: hidden;
   }
@@ -692,39 +652,34 @@ footer a {
     display: none;
   }
   main {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-areas: "construction  doorsWindows  realEstate" "projects_gallery projects_gallery projects_gallery" "contacts_info contacts_info contacts_info";
     padding: 6em 0 0 0;
     margin: 0 auto;
   }
   .our_services {
-    display: -ms-grid;
-    display: grid;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     max-width: 1440px;
     margin: 0 auto;
-    grid-gap: 2em;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "construction doorsWindows realEstate";
-    padding: 0 2em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .our_services a {
+    margin: 0 2em;
+    width: 350px;
   }
   .construction {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: construction;
     margin: unset;
   }
   .doorsWindows {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: doorsWindows;
     margin: unset;
   }
   .realEstate {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: realEstate;
     margin: unset;
   }
   .construction .title,
@@ -736,7 +691,6 @@ footer a {
     color: #272a35;
     padding: 1em 0 1em 0;
     margin: unset;
-    letter-spacing: 0.05em;
   }
   .construction .content,
   .doorsWindows .content,
@@ -751,34 +705,25 @@ footer a {
     width: 2em;
   }
   main .contacts_info {
-    display: block;
-  }
-  .contacts_info {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-area: contacts_info;
-    cursor: unset;
-    text-align: left;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    background-color: #272a35;
-    border-radius: unset;
-    width: 100%;
-    margin: 0;
-  }
-  .contacts_info .contacts {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-  .contacts_info .contacts .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    cursor: unset;
+    background-color: #272a35;
+    border-radius: unset;
+    margin: 0;
+  }
+  main .contacts_info .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  main .contacts_info .contacts .content {
     color: #d3d7e5;
   }
   .contacts_info.bg {
@@ -857,12 +802,14 @@ div.info > p {
     margin-top: 3em;
   }
   .gallery {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 2em;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
-    margin: 2em 2em 0em 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   form label {
     background: #faf7ff;
