@@ -87,7 +87,7 @@ header {
     line-height: 1px;
     padding: 0;
     margin: 6px 0;
-    width: 2.5em;
+    width: 2em;
   }
 }
 
@@ -730,7 +730,7 @@ footer {
       // align-items: flex-end;
       background-color: #272a35;
       border-radius: unset;
-      // width: 100%;
+      width: 100%;
       margin: 0;
       // .title {
       //   display: none;
@@ -846,7 +846,7 @@ footer {
       max-width: 1440px;
       width: 100%;
       margin: 0 auto;
-      margin-top: 3em;
+      margin-top: 0em;
     }
     .gallery {
       display: flex;
@@ -856,6 +856,9 @@ footer {
       // grid-template-columns: repeat(4, 1fr);
       // margin: 2em 2em 0em 2em;
       // margin: 0 2em;
+      .object p {
+        margin-top: 0;
+      }
     }
 
     form label {

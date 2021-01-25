@@ -5,7 +5,7 @@ main {
   flex-direction: column;
   //   padding-top: 0em;
 }
-.mediniai_container {
+.aliuminiai_container {
   padding: 2em 0;
   margin: 2em;
   text-align: left;
@@ -19,7 +19,7 @@ main {
   .part_two {
     padding: 0 2em;
   }
-  .plastikiniai_services {
+  .aliuminiai_services {
     // padding-bottom: 1.5em;
   }
 
@@ -38,7 +38,7 @@ main {
     // box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
   }
 
-  .mediniai_title {
+  .aliuminiai_title {
     font-size: 16px;
     text-align: center;
     text-transform: uppercase;
@@ -49,16 +49,16 @@ main {
     letter-spacing: 0.5px;
     // padding: unset;
   }
-  .mediniai_image {
+  .aliuminiai_image {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .mediniai_big {
+  .aliuminiai_big {
     display: none;
   }
-  .mediniai_small {
+  .aliuminiai_small {
     // width: 100%;
     padding: 2em 0;
   }
@@ -87,21 +87,21 @@ main {
 //   }
 // }
 @media (min-width: 828px) {
-  .mediniai_container {
+  .aliuminiai_container {
     max-width: 927px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: baseline;
-    .mediniai_title {
+    .aliuminiai_title {
       min-width: 100%;
       padding: 0 10em;
       justify-content: center;
     }
-    .mediniai_image {
+    .aliuminiai_image {
       width: 50%;
       order: 2;
-      .mediniai_small {
+      .aliuminiai_small {
         // padding: 1em 0;
       }
     }
@@ -118,7 +118,7 @@ main {
       order: 3;
       width: 100%;
     }
-    .mediniai_image .mediniai_big {
+    .aliuminiai_image .aliuminiai_big {
       display: none;
     }
   }
@@ -128,7 +128,7 @@ main {
   main {
     padding: 4em 0 0 0;
   }
-  .mediniai_container {
+  .aliuminiai_container {
     max-width: 1440px;
     margin-left: 15em;
     margin-right: 15em;
@@ -139,7 +139,7 @@ main {
     // grid-template-areas:
     // "description image"
     // "services .";
-    .mediniai_content {
+    .aliuminiai_content {
       padding: 1em 2em;
     }
     // display: flex;

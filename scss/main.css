@@ -110,7 +110,7 @@ header .line {
   line-height: 1px;
   padding: 0;
   margin: 6px 0;
-  width: 2.5em;
+  width: 2em;
 }
 
 .welcome {
@@ -711,6 +711,7 @@ footer a {
     cursor: unset;
     background-color: #272a35;
     border-radius: unset;
+    width: 100%;
     margin: 0;
   }
   main .contacts_info .contacts {
@@ -799,7 +800,7 @@ div.info > p {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    margin-top: 3em;
+    margin-top: 0em;
   }
   .gallery {
     display: -webkit-box;
@@ -810,6 +811,9 @@ div.info > p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .gallery .object p {
+    margin-top: 0;
   }
   form label {
     background: #faf7ff;

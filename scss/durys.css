@@ -11,7 +11,7 @@ main {
           flex-direction: column;
 }
 
-.plastikiniai_container {
+.durys_container {
   padding: 2em 0;
   margin: 2em;
   text-align: left;
@@ -23,21 +23,17 @@ main {
   max-width: 350px;
 }
 
-.plastikiniai_container .part_one,
-.plastikiniai_container .part_two {
+.durys_container .part_one,
+.durys_container .part_two {
   padding: 0 2em;
 }
 
-.plastikiniai_container .plastikiniai_services {
-  padding-bottom: 1.5em;
-}
-
-.plastikiniai_container p {
+.durys_container p {
   font-size: 16px;
   color: #272a35;
 }
 
-.plastikiniai_container .plastikiniai_title {
+.durys_container .durys_title {
   font-size: 16px;
   text-align: center;
   text-transform: uppercase;
@@ -48,7 +44,7 @@ main {
   letter-spacing: 0.5px;
 }
 
-.plastikiniai_container .plastikiniai_image {
+.durys_container .durys_image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,16 +58,16 @@ main {
   width: 100%;
 }
 
-.plastikiniai_container .plastic_big {
+.durys_container .durys_big {
   display: none;
 }
 
-.plastikiniai_container .plastic_small {
+.durys_container .durys_small {
   padding: 2em 0;
 }
 
 @media (min-width: 828px) {
-  .plastikiniai_container {
+  .durys_container {
     max-width: 927px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -86,33 +82,33 @@ main {
         -ms-flex-pack: baseline;
             justify-content: baseline;
   }
-  .plastikiniai_container .plastikiniai_title {
+  .durys_container .durys_title {
     min-width: 100%;
     padding: 0 10em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .plastikiniai_container .plastikiniai_image {
+  .durys_container .durys_image {
     width: 50%;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .plastikiniai_container .part_one {
+  .durys_container .part_one {
     width: 50%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
     grid-area: para;
   }
-  .plastikiniai_container .part_two {
+  .durys_container .part_two {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
     width: 100%;
   }
-  .plastikiniai_container .plastikiniai_image .plastic_big {
+  .durys_container .durys_image .durys_big {
     display: none;
   }
 }
@@ -121,13 +117,13 @@ main {
   main {
     padding: 4em 0 0 0;
   }
-  .plastikiniai_container {
+  .durys_container {
     max-width: 1440px;
     margin-left: 15em;
     margin-right: 15em;
   }
-  .plastikiniai_container .plastikiniai_content {
+  .durys_container .durys_content {
     padding: 1em 2em;
   }
 }
-/*# sourceMappingURL=plastikiniai_langai.css.map */
+/*# sourceMappingURL=durys.css.map */

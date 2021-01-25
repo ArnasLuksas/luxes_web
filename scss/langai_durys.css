@@ -2,17 +2,14 @@
   display: none;
 }
 
-main {
+.langai_durys_contrainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 .langaiDurys_content {
@@ -62,14 +59,17 @@ main {
   max-width: 300px;
 }
 
-p {
-  font-size: 16px;
+.langaiDurys_description p {
+  font-size: 18px;
   color: #272a35;
+  text-align: center;
+  padding: 1em 2em;
+  text-transform: uppercase;
 }
 
 .langaiDurys_title {
-  padding-top: 2em;
   font-size: 16px;
+  padding-top: 1em;
   letter-spacing: 0.1em;
 }
 
@@ -123,7 +123,7 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 927px;
-    margin: 2em auto;
+    width: 100%;
   }
   .langaiDurys_services {
     display: -webkit-box;
@@ -187,7 +187,7 @@ p {
     margin-bottom: 6em;
   }
   .langaiDurys_content .langaiDurys_services {
-    margin: 4em 1em 2em 1em;
+    margin: 2em 1em 2em 1em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -199,14 +199,15 @@ p {
   .langaiDurys_services > div img {
     height: 270px;
   }
+  .langaiDurys_description,
+  .langaiDurys_services {
+    max-width: unset;
+  }
   .langaiDurys_description p {
-    text-align: justify;
-    -webkit-hyphens: none;
-        -ms-hyphens: none;
-            hyphens: none;
     line-height: 1.5em;
-    font-size: 20px;
-    padding-top: 3em;
+    font-size: 18px;
+    padding-top: 2em;
+    width: 650px;
   }
   .langaiDurys_content .langaiDurys_title {
     font-size: 18px;

@@ -25,20 +25,37 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 1em;
   background: #fff;
   -webkit-box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
           box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
 }
 
+.projects .title {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 1em 1em 0em 1em;
+}
+
+.projects .object p {
+  height: 20px;
+  margin: -2em 2em 2em 1em;
+}
+
 .gallery > div > img {
   width: 100%;
-  padding: 1em 2em 2em 2em;
+  padding: 0em 1em 2em 1em;
 }
 
 @media (min-width: 828px) {
   .projects_gallery {
     max-width: 927px;
+  }
+  .projects_gallery .projects .title {
+    padding: 1em;
   }
   .gallery {
     -ms-flex-wrap: wrap;
@@ -63,12 +80,20 @@ main {
   main .contacts_info {
     width: 100%;
   }
+  main .igyvendinti_projektai_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .projects_gallery {
     max-width: 1440px;
     width: 100%;
-    margin: 2em;
+    margin: 1em 0em 6em 0em;
     background-color: unset;
-    padding: 1em 2em;
+    padding: 2em;
+  }
+  .projects_gallery .projects .title {
+    padding: 2em 1em;
   }
 }
 /*# sourceMappingURL=igyvendinti.projektai.css.map */
