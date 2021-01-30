@@ -1,17 +1,13 @@
+@import "main";
+
 .langaiDurys_about {
   display: none;
 }
 
-// main {
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-// }
 .langai_durys_contrainer {
   display: flex;
   justify-content: center;
   width: 100%;
-  // max-width: 1440px;
 }
 .langaiDurys_content {
   display: flex;
@@ -22,11 +18,6 @@
   background: #fff;
   box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
 
-  // text-align: left;
-  // color: #272a35;
-  // border-radius: 1em;
-  // background: #fff;
-  // box-shadow: 0px 5px 5px #e1dee6, -5px -5px 5px #ffffff;
   .langaiDurys_services > div:hover,
   .langaiDurys_services > .door:hover {
     transform: scale(1.03);
@@ -35,12 +26,7 @@
 }
 .langaiDurys_description,
 .langaiDurys_services {
-  // display: flex;
-  // flex-direction: column;
-  // flex-wrap: wrap;
   max-width: 350px;
-  // padding-top: 1em;
-  // padding: 1em 2em 2em 2em;
   margin: 0 auto;
 }
 // .langaiDurys_services
@@ -57,24 +43,17 @@
 }
 .langaiDurys_description p {
   font-size: 18px;
-  color: #272a35;
   text-align: center;
   padding: 1em 2em;
   text-transform: uppercase;
 }
 
 .langaiDurys_title {
-  // padding-top: 0em;
-  // padding: 0.5em;
   font-size: 16px;
   padding-top: 1em;
-  // margin: 2em 0;
-  // font-size: 1.7em;
-  // font-weight: 700;
   letter-spacing: 0.1em;
-  // transform: translate(51%, 20%);
-  // border: 3px solid black;
-  // width: 250px;
+  color: $title-color;
+  text-transform: uppercase;
 }
 
 .langaiDurys_image {
@@ -109,22 +88,6 @@
   padding: 0 2em 3em 2em;
 }
 
-.langaiDurys_description > p {
-  // text-align: justify;
-  // hyphens: none;
-  // line-height: 1.5em;
-  // font-size: 20px;
-  // padding: 0 9em;
-}
-
-// @media (min-width: 768px) {
-//   .langaiDurys_content {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: center;
-//   }
-// }
-
 @media (min-width: 828px) {
   main {
     align-items: unset;
@@ -134,21 +97,13 @@
     flex-direction: column;
     max-width: 927px;
     width: 100%;
-    // margin: 2em auto;
   }
   .langaiDurys_services {
     display: flex;
     justify-content: center;
     flex-direction: row;
     width: unset;
-    // flex-wrap: wrap;
-    // padding: 1em 2em 2em 2em;
   }
-  // .langaiDurys_description,
-  // .langaiDurys_services {
-  //   max-width: 200px;
-  //   padding: 1em 2em 2em 2em;
-  // }
 
   .langaiDurys_services .wooden {
     width: 260px;
@@ -184,27 +139,28 @@
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0 2em;
   }
   .langaiDurys_content {
-    // display: grid;
-    // grid-template-columns: 50% 50%;
     width: 100%;
     max-width: 1440px;
-    margin: 0 2em 6em 2em;
+    margin: 0 0em 6em 0em;
     align-content: center;
   }
   main {
     padding: 6em 0 0 0;
   }
   .langaiDurys_content {
-    max-width: 1440px;
-    // padding: 0 0;
-    margin-bottom: 6em;
     .langaiDurys_services {
       margin: 2em 1em 2em 1em;
-      // width: 350px;
       display: flex;
       flex-direction: row;
+      .plastic,
+      .wooden,
+      .aluminium {
+        padding: 0 0;
+        height: 277px;
+      }
     }
   }
   .langaiDurys_services > div img {
@@ -214,17 +170,21 @@
   .langaiDurys_services {
     max-width: unset;
   }
+  .langaiDurys_services div {
+    margin: 2em 4em 0em 4em;
+  }
+  .langaiDurys_services .door {
+    padding: 0;
+    height: 555px;
+    margin-bottom: 4em;
+  }
   .langaiDurys_description p {
     line-height: 1.5em;
     font-size: 18px;
-    // padding: 0 9em;
     padding-top: 2em;
     width: 650px;
   }
 
-  // .langaiDurys_description > p {
-
-  // }
   .langaiDurys_content .langaiDurys_title {
     font-size: 18px;
     padding-top: 0em;
