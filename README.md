@@ -10,6 +10,6 @@ Project is created with:
 - CSS + media queries
 - Java Script
 
-<img width="1675" alt="" src="">
+<img width="1675" alt="" src="https://github.com/ArnasLuksas/luxes_web/blob/main/images/websitescreen.png">
 
 <h1><a href="http://www.luxes.lt">Live site</a></h1>
