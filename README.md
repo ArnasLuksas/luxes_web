@@ -3,8 +3,6 @@
 
 ## Technologies
 
-Project is created with:
-
 - HTML
 - CSS + media queries
 - Java Script
