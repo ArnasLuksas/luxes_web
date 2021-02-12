@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 $title-color: #303850;
 $content-color: #afb7cf;
 $para-color: #6c7693;
@@ -13,7 +13,7 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #faf7ff;
 
   ul {
@@ -83,13 +83,24 @@ header {
     position: relative;
     z-index: 111;
   }
+
   .line {
-    content: " ";
+    content: ' ';
     border: 3px solid black;
     line-height: 1px;
     padding: 0;
     margin: 6px 0;
     width: 3em;
+    transition: 0.4s;
+  }
+  .change .line:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  .change .line:nth-child(2) {
+    opacity: 0;
+  }
+  .change .line:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -9px);
   }
 }
 
