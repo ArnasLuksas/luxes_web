@@ -661,9 +661,7 @@ footer a {
   .doorsWindows .content,
   .realEstate .content,
   .contacts_info .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;

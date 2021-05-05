@@ -112,27 +112,31 @@
           </div>
 
          <div class="info_form">
-            <form method="POST" action='send'>
+            <form action="https://formspree.io/f/xoqyjddl"
+  method="POST">
               <label>Jūsų vardas</label>
-              <input type="text" name="name" />
+              <input type="text" name="name"  />
 
               <label for="name">Jūsų el.paštas</label>
-              <input type="email" name="email" />
+              <input type="email" name="email"  required/>
 
               <label for="name">Tel. numeris</label>
-              <input type="text"  name="phone" />
+              <input type="text" name="phone"  />
 
-              <label>Jūsų žinutė</label>
+              <label required>Jūsų žinutė</label>
               <textarea
                 id="subject"
                 name="message"
                 style="height: 200px"
+                required
                 
               ></textarea>
-              <button type="submit" disabled>Siųsti</button>
+              <button  type="submit" >Siųsti</button>
 
             </form>
           </div>
+
+          
         
           <iframe
             width="100%"
@@ -169,5 +173,18 @@
       &copy; <a href="http://www.luxes.lt">www.luxes.lt</a> | 2021 |
     </footer>
     <script src="/js/main.js"></script>
+ <!-- <script>
+
+const btnClear = document.querySelector('button');
+const inputs = document.querySelectorAll('input');
+const textarea = document.querySelectorAll('textarea');
+
+ 
+btnClear.addEventListener('click', () => {
+    inputs.forEach(input =>  input.value = '');
+    textarea.forEach(input => input.value = ' ')
+});
+
+    </script>  -->
   </body>
 </html>
