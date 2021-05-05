@@ -5,6 +5,6 @@
 
 - HTML
 - CSS + media queries
-- Java Script
+- JavaScript
 
 <img width="1675" alt="constructions windows doors" src="https://github.com/ArnasLuksas/luxes_web/blob/main/images/websitescreen.png">
